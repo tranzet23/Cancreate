@@ -1,0 +1,29 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// small blocks
+@import "components/small-blocks/btn";
+@import "components/small-blocks/modal";
+@import "components/small-blocks/dropdown";
+@import "components/small-blocks/burger";
+@import "components/small-blocks/burger-menu";
+@import "components/small-blocks/title";
+
+
+// Big blocks
+
+
+
+
+@import "components/big-blocks/header";
+
+
+
+@import "components/big-blocks/footer";
+
+
+
+
+@import "block/*.scss";
