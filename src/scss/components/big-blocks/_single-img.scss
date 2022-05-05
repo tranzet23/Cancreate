@@ -1,7 +1,10 @@
 .single-img {
   overflow: hidden;
 
+
+
   padding-bottom: 250px;
+
 
 
   &__container {
@@ -13,7 +16,6 @@
   &-wrap {
     position: relative;
     width: max-content;
-
 
     &:hover {
       .view-link {
