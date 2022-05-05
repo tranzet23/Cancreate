@@ -10,6 +10,15 @@
   top: 170px;
   left: 150px;
 
+  &:after {
+    position: absolute;
+    content: '';
+    width: 128px;
+    height: 128px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+  }
+
   span {
     font-weight: 500;
     font-size: 14px;
