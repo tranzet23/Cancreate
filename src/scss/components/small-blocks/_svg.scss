@@ -1,0 +1,29 @@
+.camera {
+  width: 105px;
+
+
+  &-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 172px;
+    height: 172px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.2);
+    @include flex-all-center;
+  }
+}
+.circle-item {
+  position: relative;
+  width: 260px;
+  height: 260px;
+}
+
+svg.circle-text {
+  position: absolute;
+  fill: currentColor;
+  height: auto;
+  transform-origin: center;
+  width: 170%;
+}

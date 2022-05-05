@@ -1,0 +1,20 @@
+.view-link {
+  position: absolute;
+  width: 128px;
+  height: 128px;
+  background: $color-orange;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 170px;
+  left: 150px;
+
+  span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #fff;
+  }
+}
