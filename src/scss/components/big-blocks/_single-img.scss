@@ -1,5 +1,6 @@
 .single-img {
   overflow: hidden;
+  padding-bottom: 250px;
 
   &__container {
     display: flex;
@@ -10,6 +11,13 @@
   &-wrap {
     position: relative;
     width: max-content;
+
+    &:hover {
+      .view-link {
+        display: flex;
+        transition: all .5s;
+      }
+    }
   }
 
   .scroll-text {
