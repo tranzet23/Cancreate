@@ -168,3 +168,12 @@ p {
   }
 }
 
+.color-orange {
+  color: $color-orange;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
