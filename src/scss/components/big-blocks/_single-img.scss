@@ -1,0 +1,38 @@
+.single-img {
+  overflow: hidden;
+
+  &__container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+
+  &-wrap {
+    position: relative;
+    width: max-content;
+  }
+
+  .scroll-text {
+    &:first-child {
+      top: 130px;
+      left: -150px;
+    }
+
+
+    &:nth-child(2) {
+      top: 300px;
+      left: 170px;
+    }
+  }
+}
+
+.scroll-text {
+  position: absolute;
+  font-weight: 600;
+  font-size: 180px;
+  line-height: 100%;
+  letter-spacing: -0.08em;
+  text-transform: uppercase;
+  color: #121212;
+  white-space: nowrap;
+}
