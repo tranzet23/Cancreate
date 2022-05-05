@@ -1,0 +1,29 @@
+.contact-info {
+  height: 800px;
+
+  &_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  span {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    opacity: 0.5;
+    margin-bottom: 32px;
+  }
+  p {
+    font-weight: 300;
+    font-size: 38px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.08em;
+  }
+}
