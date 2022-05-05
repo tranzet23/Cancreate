@@ -9,6 +9,7 @@
   justify-content: center;
   top: 170px;
   left: 150px;
+  display: none;
 
   &:after {
     position: absolute;
@@ -17,6 +18,7 @@
     height: 128px;
     border: 1px solid #fff;
     border-radius: 50%;
+    left: -10px;
   }
 
   span {

@@ -1,0 +1,58 @@
+.quadro {
+  height: 800px;
+  overflow: hidden;
+
+  &-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 38px;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: -0.08em;
+  }
+  &-bg {
+    position: absolute;
+    height: 100%;
+    background: #F7941D;
+    opacity: 0.8;
+    filter: blur(500px);
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &-item {
+    position: absolute;
+  }
+}
+
+.quadro-item-1 {
+  left: 0;
+}
+
+.quadro-item.quadro-item-2 {
+  top: 135px;
+  left: 60%;
+}
+
+.quadro-item-3 {
+  right: 0;
+  bottom: -110px;
+}
+
+.quadro-item-4 {
+  top: 60%;
+  left: 50%;
+}
+
+.quadro-item-5 {
+  right: 190px;
+  top: 50px;
+}
