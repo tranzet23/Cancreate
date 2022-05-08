@@ -1,0 +1,22 @@
+.triple {
+  min-height: 1050px;
+
+  &-items {
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+  }
+
+  &-item {
+
+
+    &:nth-child(2) {
+      margin-top: 150px;
+    }
+    &:last-child {
+      margin-top: 300px;
+    }
+  }
+
+
+}

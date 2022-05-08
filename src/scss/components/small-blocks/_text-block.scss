@@ -1,0 +1,17 @@
+.text-block {
+  padding-bottom: 90px;
+  p{
+    font-weight: 600;
+    font-size: 180px;
+    line-height: 100%;
+    letter-spacing: -0.08em;
+    text-transform: uppercase;
+    color: #121212;
+
+    &:last-child {
+        -webkit-text-stroke: 2px var(--orange);
+        -webkit-text-fill-color: #000;
+    }
+  }
+
+}

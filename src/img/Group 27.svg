@@ -1,0 +1,6 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M40 52C46.6274 52 52 46.6274 52 40C52 33.3726 46.6274 28 40 28C33.3726 28 28 33.3726 28 40C28 46.6274 33.3726 52 40 52Z" stroke="CurrentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M45 35H43C42.2044 35 41.4413 35.3161 40.8787 35.8787C40.3161 36.4413 40 37.2044 40 38V52" stroke="CurrentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M36 42H44" stroke="CurrentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<circle opacity="0.2" cx="40" cy="40" r="39.5" stroke="CurrentColor"/>
+</svg>

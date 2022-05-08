@@ -1,0 +1,26 @@
+.double-slider {
+  min-height: 800px;
+  padding-bottom: 200px;
+
+  &-inner {
+    max-width: 1360px;
+    margin: 0 auto;
+
+  }
+}
+.double-slider {
+  margin: 0 -10px;
+}
+.double-item {
+  position: relative;
+  margin: 0 10px;
+
+  &:hover {
+
+    & .view-link {
+      display: flex;
+      top: 70%;
+      left: 30%;
+    }
+  }
+}
