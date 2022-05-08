@@ -1,0 +1,164 @@
+.contact {
+  padding-top: 285px;
+  padding-bottom: 300px;
+
+  h1 {
+    font-weight: 400;
+    font-size: 128px;
+    line-height: 92%;
+    letter-spacing: -0.08em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 190px;
+  }
+
+  &-information {
+    max-width: 480px;
+
+    div {
+      margin-top: 90px;
+      margin-bottom: 50px;
+
+      &:last-child {
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
+      p {
+        margin-top: 8px;
+      }
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 28px;
+      line-height: 120%;
+      letter-spacing: -0.08em;
+      color: #FFFFFF;
+    }
+
+    span {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 120%;
+      text-transform: uppercase;
+    }
+  }
+
+  &-form {
+    max-width: 670px;
+    width: 100%;
+  }
+}
+
+form#contact-form {
+  display: flex;
+  flex-direction: column;
+
+  p {
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: -0.08em;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+  }
+
+
+}
+
+
+//
+input[type="text"]:active, textarea:active{
+  border: 1px solid #F7941D !important;
+  color: #F7941D !important;
+}
+input[type="text"]:focus, textarea:focus {
+  border: 1px solid #F7941D !important;
+  color: #F7941D !important;
+}
+
+input[type="text"]:hover, textarea:hover {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+input[type="text"] {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, .2);
+  padding-left: 24px;
+  margin-bottom: 15px;
+  height: 66px;
+  width: 100%;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+textarea {
+  min-height: 200px;
+  border: 1px solid rgba(255, 255, 255, .2);
+  padding-left: 24px;
+  width: 100%;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: transparent;
+  padding-top: 24px;
+}
+
+input[type="text"]:hover::placeholder ,textarea:hover::placeholder {
+  color: #fff;
+}
+
+textarea::placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+.checkcontainer {
+  input {
+    opacity: 0;
+  }
+}
+
+.policy {
+  margin-top: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+
+  p {
+    margin-bottom: 0 !important;
+  }
+}
+
+.form-sub_text {
+  position: relative;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 100%;
+  letter-spacing: -0.08em;
+  color: #FFFFFF;
+  width: max-content;
+
+  &:after {
+    position: absolute;
+    background-image: url("../img/Group 21.svg");
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 14px;
+    content: '';
+    top: 0;
+    right: -30px;
+  }
+}
