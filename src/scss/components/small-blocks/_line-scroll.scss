@@ -1,0 +1,19 @@
+.line-scroll {
+  height: 128px;
+  margin-top: 150px;
+  width: 1px;
+  background: rgba(255,255,255,.2);
+
+  &--wrap {
+    height: 100%;
+    width: 100%;
+    flex-direction: column-reverse;
+    display: flex;
+  }
+
+  &--el {
+    background: #fff;
+    width: 100%;
+    height: 20%;
+  }
+}

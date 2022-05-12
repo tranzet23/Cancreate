@@ -78,10 +78,12 @@ input[type="text"]:active, textarea:active{
   border: 1px solid #F7941D !important;
   color: #F7941D !important;
 }
-input[type="text"]:focus, textarea:focus {
+input[type="text"]:focus,input[type="text"]:focus-visible, textarea:focus, textarea:focus-visible {
   border: 1px solid #F7941D !important;
   color: #F7941D !important;
+  outline: none !important;
 }
+
 
 input[type="text"]:hover, textarea:hover {
   color: #fff;
@@ -136,6 +138,8 @@ textarea::placeholder {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255,255,255,.2);
 
   p {
     margin-bottom: 0 !important;
@@ -160,5 +164,17 @@ textarea::placeholder {
     content: '';
     top: 0;
     right: -30px;
+  }
+}
+
+.accept-policy {
+  span {
+    cursor: pointer;
+    &.active {
+      color: #f7941d !important;
+    }
+    &:first-child {
+      margin-right: 32px;
+    }
   }
 }

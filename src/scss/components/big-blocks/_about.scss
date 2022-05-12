@@ -11,19 +11,22 @@
   }
 
   h1 {
-    margin:65px 0;
+    margin: 65px 0;
     width: 60%;
-    color: #fff;
     text-transform: uppercase;
     font-weight: 400;
     font-size: 90px;
     line-height: 100%;
     letter-spacing: -0.08em;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: lighten;
 
     span {
       font-size: 90px !important;
     }
   }
+
   p {
     max-width: 480px;
     width: 100%;
@@ -31,9 +34,28 @@
     font-size: 12px;
     line-height: 160%;
   }
+
   .circle-item {
     position: absolute;
     right: 150px;
     bottom: -5px;
   }
+}
+
+.block-bg-img {
+  background: url(https://upload.wikimedia.org/wikipedia/ru/1/1d/%D0%91%D0%B5%D0%B7%D0%BC%D1%8F%D1%82%D0%B5%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D1%8C.png);
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  padding-top: 20px;
+
+  margin: 65px 0;
+  max-width: 826px;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 90px;
+  line-height: 100%;
+  letter-spacing: -0.08em;
+  mix-blend-mode: lighten;
+  height: 100%;
 }
