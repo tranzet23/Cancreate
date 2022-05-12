@@ -31,7 +31,7 @@ export default () => {
         )
         .pipe(sassGlob())
         .pipe(sass())
-        .pipe(webpCss())
+        // .pipe(webpCss())
         .pipe(autoprefixer())
         .pipe(size({title: "main.css"}))
         .pipe(gulp.dest(path.scss.build, {sourcemaps: app.isDev}))

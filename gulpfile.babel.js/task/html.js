@@ -25,7 +25,7 @@ export default () => {
                 prefix: "@",
             })
         )
-        .pipe(webpHtml())
+        // .pipe(webpHtml())
         .pipe(prettyHtml())
         .pipe(gulp.dest(path.html.build))
 };

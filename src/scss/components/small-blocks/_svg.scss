@@ -19,11 +19,15 @@
   width: 260px;
   height: 260px;
 }
-
+@keyframes moving {
+  100% {transform: rotate(-360deg);}
+}
 svg.circle-text {
   position: absolute;
   fill: currentColor;
   height: auto;
   transform-origin: center;
   width: 170%;
+  //animation: moving 3s infinite linear;
+  //transform-origin: -80px -80px;
 }

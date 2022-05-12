@@ -24,7 +24,7 @@ const img = () => {
             })
         )
         .pipe(newer(path.img.build))
-        .pipe(webp())
+        // .pipe(webp())
         .pipe(gulp.dest(path.img.build))
         .pipe(gulp.src(path.img.src))
         .pipe(newer(path.img.build))

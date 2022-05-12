@@ -51,5 +51,8 @@
     "sass": "^1.49.0",
     "webpack": "^5.67.0",
     "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "aos": "^2.3.4"
   }
 }
