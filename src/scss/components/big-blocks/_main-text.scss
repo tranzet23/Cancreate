@@ -5,6 +5,7 @@
   .container {
     @include flex-all-center;
     height: 100%;
+    flex-direction: column;
   }
 
   p {
