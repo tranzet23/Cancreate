@@ -1,0 +1,52 @@
+.about-info {
+  padding-top: 120px;
+  height: 800px;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .content {
+    max-width: 600px;
+    width: 100%;
+    margin-right: 85px;
+
+    span {
+      font-weight: 500;
+      font-size: 68px;
+      line-height: 100%;
+      letter-spacing: -0.08em;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 180%;
+      color: #FFFFFF;
+      margin-top: 50px;
+
+    }
+  }
+  &-photo {
+    margin-top: 50px;
+
+    p {
+      margin-top: 32px;
+      span {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        color: #FFFFFF;
+
+        &:last-child {
+          opacity: 0.5;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}

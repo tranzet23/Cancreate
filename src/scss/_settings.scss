@@ -176,7 +176,23 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 .scroll-hide {
   overflow: hidden;
+}
+.orange-block-bg {
+  position: absolute;
+  width: 423px;
+  height: 423px;
+  background: #F7941D;
+  opacity: 0.2;
+  filter: blur(300px);
+}
+
+.flex {
+  display: flex;
+}
+.pt-0 {
+  padding-top: 0;
 }

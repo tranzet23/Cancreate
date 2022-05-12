@@ -1,0 +1,17 @@
+.about-photo{
+	padding-bottom: 100px;
+	&__inner{
+		display: flex;
+		column-gap: 135px;
+		justify-content: center;
+	}
+	&__long{
+		margin-top: 170px;
+	}
+	&__box{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 128px;
+	}
+}

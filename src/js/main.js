@@ -20,8 +20,23 @@
 //         body.classList.remove('scroll-hide');
 //     }
 // })
-
 // slider-works
+$('.works__slider').slick({
+	infinite: true,
+	speed: 300,
+	slidesToShow: 1,
+	centerMode: true,
+	variableWidth: true
+	
+  });
+
+$('.double-slider').slick({
+    infinite: true,
+    speed: 300,
+    slidesToShow: 2,
+    variableWidth: true,
+    autoplay: true
+});
 
 $('.works__slider').slick({
 	infinite: true,
@@ -50,4 +65,41 @@ burgerBtn.addEventListener('click', function () {
         menuContent.classList.add('hide');
         body.classList.remove('scroll-hide');
     }
+})
+
+//dropdown
+try{
+	let navigationSelect = document.querySelector('.select-wrapper');
+	function initSelect(elem){
+		var selectHolder = elem.querySelector('.holder');
+		var selectOptions = elem.querySelectorAll('.dropdownOption li');
+		var dropHolder = elem.querySelector('.dropdown');
+		var selectedOption = selectOptions[0];
+		selectedOption.classList.add('current');
+		selectHolder.addEventListener('click', function () {
+			dropHolder.classList.toggle('active');  });
+		selectOptions.forEach(function(currentElement) {
+			currentElement.addEventListener('click', function(){
+				selectedOption.classList.remove('current');
+				selectedOption = currentElement;
+				currentElement.classList.add('current');
+				selectHolder.innerHTML = currentElement.innerHTML;
+				dropHolder.classList.toggle('active');
+			});
+		});
+	};
+	initSelect(navigationSelect);
+}
+catch (e) {
+
+}
+
+
+
+const choiceBtn	=	document.querySelectorAll('.choice__btn');
+
+choiceBtn.forEach( btn =>{
+	btn.addEventListener('click', ()=>{
+		btn.classList.toggle('color-flex')
+	})
 })
