@@ -1,0 +1,21 @@
+.banner{
+	position: relative;
+	padding-top: 128px;
+	// min-height: 700px;
+	&::before{
+		position: absolute;
+		content:'';
+		background-image: url(../img/banner-elipse.png);
+		height: 104%;
+		width: 100%;
+		top: 0;
+		background-repeat: no-repeat;
+	}
+	&__text{
+		text-align: right;
+	}
+	&__text-border{
+		position: relative;
+		left: -81px;
+	}
+}

@@ -1,21 +1,73 @@
 <div class="video-block">
     <div class="container">
-<!--        <iframe src="https://www.youtube.com/embed/X8Z8okhkjv8" title="YouTube video player"-->
-<!--                frameborder="0"-->
-<!--                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"-->
-<!--                allowfullscreen></iframe>-->
-<!--        -->
-
-
-        <div class="wrapper">
-            <!-- begin Video Youtube
-            =========================================================================== -->
-            <div class="video-youtube video-youtube_overlay">
-                <div id="video-youtube__content" class="video-youtube__content video-youtube__content_hide-origin-play-btn"></div>
-                <button type="button" class="video-youtube__new-play-btn"></button>
+        <div class="video-box">
+            <div class="player" id="player">
+                <video class="player_video viewer"
+                       src="https://player.vimeo.com/external/194837908.sd.mp4?s=c350076905b78c67f74d7ee39fdb4fef01d12420&profile_id=164"
+                       poster="img/video-bg.png">
+                </video>
+                <div class="player_controls">
+                    <div class="progress-range" title="Jump-to">
+                        <div class="progress-bar"></div>
+                    </div>
+                    <div class="left-controls">
+                        <button class="player_button toggle" title='Toggle Play'><i class="fa fa-play" title="Play"
+                                                                                    id="..."></i></button>
+                        <button class="player_button stop" title='Start over'><i class="fa fa-stop" title="Play"
+                                                                                 id="stop-btn"></i></button>
+                        <button class="player_button speaker"><i id="speaker_icon" class="fa fa-volume-up"
+                                                                 aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.4697 2.55085C14.6412 2.63475 14.75 2.80904 14.75 3V21C14.75 21.191 14.6412 21.3653 14.4697 21.4492C14.2981 21.5331 14.0938 21.5119 13.943 21.3947L7.32845 16.25H3C2.66848 16.25 2.35054 16.1183 2.11612 15.8839C1.8817 15.6495 1.75 15.3315 1.75 15V9C1.75 8.66848 1.8817 8.35054 2.11612 8.11612C2.35054 7.8817 2.66848 7.75 3 7.75H7.32845L13.943 2.60533C14.0938 2.48809 14.2981 2.46694 14.4697 2.55085ZM13.75 4.02232L7.80697 8.64468C7.7192 8.71294 7.61119 8.75 7.5 8.75H3C2.9337 8.75 2.87011 8.77634 2.82322 8.82323C2.77634 8.87011 2.75 8.9337 2.75 9V15C2.75 15.0663 2.77634 15.1299 2.82322 15.1768C2.87011 15.2237 2.93369 15.25 3 15.25H7.5C7.61119 15.25 7.7192 15.2871 7.80697 15.3553L13.75 19.9777V4.02232Z" fill="white"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.9984 9.25C18.2745 9.25 18.4984 9.47386 18.4984 9.75V14.25C18.4984 14.5261 18.2745 14.75 17.9984 14.75C17.7222 14.75 17.4984 14.5261 17.4984 14.25V9.75C17.4984 9.47386 17.7222 9.25 17.9984 9.25Z" fill="white"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.9984 7.75C21.2745 7.75 21.4984 7.97386 21.4984 8.25V15.75C21.4984 16.0261 21.2745 16.25 20.9984 16.25C20.7222 16.25 20.4984 16.0261 20.4984 15.75V8.25C20.4984 7.97386 20.7222 7.75 20.9984 7.75Z" fill="white"/>
+                            </svg>
+                        </i>
+                        </button>
+                        <input type="range" name="volume" class="player_slider" min="0" max="1" step="0.05"
+                               value="1"></input>
+                    </div>
+                    <div class="right-controls">
+                        <!-- I don't see the need for spped changes but I'm leaving the code in for now -->
+                        <!-- <button class="player_button rate_icon"><i class="fa fa-spinner" aria-hidden="true"></i></button>
+                        <input type="range" name="playbackRate" class="player_slider" min="0.5" max="2" step="0.1" value="1"></input> -->
+                        <button data-skip="-10" class="player_button"><i class="fa fa-fast-backward"
+                                                                         aria-hidden="true"></i></button>
+                        <button data-skip="10" class="player_button"><i class="fa fa-fast-forward"
+                                                                        aria-hidden="true"></i></button>
+                        <div class="time">
+                            <span class="time-elapsed">00:00 / </span>
+                            <span class="time-duration">2:38</span>
+                        </div>
+                        <button class="player_button screenSize"><i id="screenSize_icon" class="fa fa-expand"
+                                                                    aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <button class="player_button toggle" title='Toggle Play'>
+                    <div id="play-btn"  class="inner-play fa fa-play">
+                        <div class="wrap-play">
+                            <svg class="circle-text" viewBox="0 0 100 100" width="100" height="100">
+                                <defs>
+                                    <path id="circle" d="
+							M 50, 50
+							m -37, 0
+							a 37,37 0 1,1 74,0
+							a 37,37 0 1,1 -74,0">
+                                    </path>
+                                </defs>
+                                <text font-size="14.5px">
+                                    <textPath xlink:href="#circle">
+                                        • Showreel video • Showreel video
+                                    </textPath>
+                                </text>
+                            </svg>
+                        </div>
+                        <div class="video__popup">
+                            <img class="video__play" src="img/video-play.svg" alt="">
+                        </div>
+                    </div>
+                </button>
             </div>
-            <!-- end Video Youtube
-            =========================================================================== -->
         </div>
     </div>
 </div>
