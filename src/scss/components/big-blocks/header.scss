@@ -1,6 +1,6 @@
 .header {
   background: transparent;
-  position: fixed;
+  position: absolute;
   top: 20px;
   width: 100%;
   z-index: 2;
@@ -39,7 +39,7 @@
     div {
       width: 50px;
       background: #fff;
-      height: 1px;
+      height: 2px;
 
       &:first-child {
         width: 36px;
@@ -58,4 +58,7 @@
 	.header-additional{
 		display: block;
 	}
+  .header-btn div {
+    background: #000;
+  }
 }

@@ -55,7 +55,7 @@ try{
 				dropHolder.classList.toggle('active');
 			});
 		});
-	};
+	}
 	initSelect(navigationSelect);
 }
 catch (e) {
@@ -322,3 +322,41 @@ $('.services-links__link').on('click', function(){
 	$('.services-links__item').removeClass('services-links__item--active');
 	$(this).parent().addClass('services-links__item--active');
 })
+ // scroll-top
+$("document").ready(function($){
+    var scrollBtn = $('.scroll-svg');
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1000) {
+            scrollBtn.addClass("doch");
+
+        } else {
+            scrollBtn.removeClass("doch");
+        }
+    });
+});
+$('.scroll-svg').click(function() {
+    $('html, body').animate({
+        scrollTop: 0
+    }, 800);
+    return false;
+
+});
+
+$('[data-fancybox]').fancybox({
+    // Options will go here
+    buttons : [
+        'close'
+    ],
+    wheel : false,
+    transitionEffect: "slide",
+    // thumbs          : false,
+    // hash            : false,
+    loop            : true,
+    // keyboard        : true,
+    toolbar         : false,
+    // animationEffect : false,
+    // arrows          : true,
+    clickContent    : false
+});
+
