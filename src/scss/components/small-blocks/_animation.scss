@@ -16,14 +16,16 @@
   }
 }
 @keyframes move-line {
-
-  from {
-    transform: translateX(0);
+	from {
+	  transform: translateX(0);
+	}
+	50% {
+	  transform:translateX(700px)
+	}
+	to {
+	  transform: translateX(0);
+	}
   }
-  to {
-    transform: translateX(-1000px);
-  }
-}
 
 .scroll-text {
   animation: 8s move;
@@ -36,3 +38,7 @@
   animation: 5s move-line;
   animation-iteration-count: infinite;
 }
+
+// .services__bg{
+// 	animation: 4s move-line infinite;
+// }

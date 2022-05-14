@@ -38,15 +38,6 @@ $('.double-slider').slick({
     autoplay: true
 });
 
-$('.works__slider').slick({
-	infinite: true,
-	speed: 300,
-	slidesToShow: 1,
-	centerMode: true,
-	variableWidth: true
-	
-  });
-
 let body = document.querySelector('body')
 let burgerBtn = document.querySelector('.burger-menu');
 let menuContent = document.querySelector('.dropdown-menu');
@@ -184,20 +175,17 @@ choiceBtn.forEach( btn =>{
 	btn.addEventListener('click', ()=>{
 		btn.classList.toggle('color-flex')
 	})
-var tag = document.createElement("script");
-
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName("script")[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-/* -------------------------------------------------------------------------
-   end Video Youtube
- * ------------------------------------------------------------------------- */
-
-
- 
 })
 
 AOS.init({
     duration: 1200,
+})
+
+
+// Accordion	
+
+
+$('.services-links__link').on('click', function(){
+	$('.services-links__item').removeClass('services-links__item--active');
+	$(this).parent().addClass('services-links__item--active');
 })
