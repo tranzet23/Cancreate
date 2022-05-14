@@ -13,7 +13,6 @@
   from {
     transform: translateY(0);
   }
-
   20% {
     transform: translateY(10%);
   }
@@ -44,7 +43,6 @@
   }
 }
 @keyframes move {
-
   from {
     transform: translateX(0);
   }
@@ -56,16 +54,17 @@
   }
 }
 @keyframes move-line {
-  from {
-    transform: translateX(0);
-  }
-  50% {
-    transform:translateX(-700px)
-  }
-  to {
-    transform: translateX(0);
-  }
+	from {
+	  transform: translateX(0);
+	}
+	50% {
+	  transform:translateX(700px)
+	}
+	to {
+	  transform: translateX(0);
+	}
 }
+
 
 .scroll-text {
   animation: 8s move;
@@ -78,6 +77,10 @@
   animation: 6s move-line;
   animation-iteration-count: infinite;
 }
+
+// .services__bg{
+// 	animation: 4s move-line infinite;
+// }
 .scroll-sec {
   .triple-items .triple-item{
     animation: infinite top-bottom linear 4s;
@@ -89,4 +92,3 @@
     animation: infinite top-bottom2 linear 5s;
   }
 }
-

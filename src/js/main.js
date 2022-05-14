@@ -19,7 +19,6 @@ let body = document.querySelector('body')
 let burgerBtn = document.querySelector('.burger-menu');
 let menuContent = document.querySelector('.dropdown-menu');
 
-
 burgerBtn.addEventListener('click', function () {
     if (menuContent.classList.contains('flex') === false) {
         menuContent.classList.add('flex');
@@ -317,3 +316,9 @@ choiceBtn.forEach( btn => {
     })
 })
 
+// Accordion	
+
+$('.services-links__link').on('click', function(){
+	$('.services-links__item').removeClass('services-links__item--active');
+	$(this).parent().addClass('services-links__item--active');
+})
