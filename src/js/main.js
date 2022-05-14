@@ -147,24 +147,6 @@ try{
         const volInput = player.querySelector('input[name="volume"]')
 //const speakerIcon = player.querySelector('#speaker_icon');
 
-choiceBtn.forEach( btn =>{
-	btn.addEventListener('click', ()=>{
-		btn.classList.toggle('color-flex')
-	})
-})
-
-AOS.init({
-    duration: 1200,
-})
-
-
-// Accordion	
-
-
-$('.services-links__link').on('click', function(){
-	$('.services-links__item').removeClass('services-links__item--active');
-	$(this).parent().addClass('services-links__item--active');
-})
 // show play button when paused
         function showPlayIcon() {
             playBtn.classList.replace('fa-pause', 'fa-play');
@@ -232,7 +214,7 @@ $('.services-links__link').on('click', function(){
         }
 
 // Click to seek within the video
-        function setProgress( e ) {
+        function setProgress(e) {
             const newTime = e.offsetX / progressRange.offsetWidth;
             progressBar.style.width = `${newTime * 100}%`;
             video.currentTime = newTime * video.duration;
@@ -335,3 +317,9 @@ choiceBtn.forEach( btn => {
     })
 })
 
+// Accordion	
+
+$('.services-links__link').on('click', function(){
+	$('.services-links__item').removeClass('services-links__item--active');
+	$(this).parent().addClass('services-links__item--active');
+})
