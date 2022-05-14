@@ -13,7 +13,6 @@
   from {
     transform: translateY(0);
   }
-
   20% {
     transform: translateY(10%);
   }
@@ -44,7 +43,6 @@
   }
 }
 @keyframes move {
-
   from {
     transform: translateX(0);
   }
@@ -64,7 +62,7 @@
   }
   to {
     transform: translateX(0);
-  }
+}
 }
 
 .scroll-text {
@@ -89,4 +87,3 @@
     animation: infinite top-bottom2 linear 5s;
   }
 }
-

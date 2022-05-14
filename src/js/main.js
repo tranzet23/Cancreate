@@ -5,7 +5,6 @@ $('.works__slider').slick({
     slidesToShow: 1,
     centerMode: true,
     variableWidth: true
-
 });
 
 $('.double-slider').slick({
@@ -16,12 +15,9 @@ $('.double-slider').slick({
     autoplay: true
 });
 
-
-
 let body = document.querySelector('body')
 let burgerBtn = document.querySelector('.burger-menu');
 let menuContent = document.querySelector('.dropdown-menu');
-
 
 burgerBtn.addEventListener('click', function () {
     if (menuContent.classList.contains('flex') === false) {
@@ -36,8 +32,6 @@ burgerBtn.addEventListener('click', function () {
         body.classList.remove('scroll-hide');
     }
 })
-
-
 
 // onmousemove = function(e){console.log("mouse location:", e.clientX, e.clientY)}
 
@@ -68,8 +62,6 @@ catch (e) {
 
 }
 
-
-
 //accept
 if(document.querySelector('.accept-policy span.yes')) {
     let acceptBlockElYes = document.querySelector('.accept-policy span.yes');
@@ -92,7 +84,6 @@ if(document.querySelector('.accept-policy span.yes')) {
         }
     })
 }
-
 
 //animate aos
 AOS.init({
@@ -132,16 +123,6 @@ if(tripleSection) {
     //     tripleSection.classList.remove('scroll-sec')
     // })
 }
-
-
-
-
-//parallax
-
-// var scene = document.getElementById('js-scene');
-// var parallax = new Parallax(scene);
-
-
 
 //video
 try{
@@ -327,11 +308,6 @@ try{
 catch {
 
 }
-
-
-
-
-
 
 const choiceBtn  =  document.querySelectorAll('.choice__btn');
 
