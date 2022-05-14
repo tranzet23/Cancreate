@@ -317,3 +317,9 @@ choiceBtn.forEach( btn => {
     })
 })
 
+// Accordion	
+
+$('.services-links__link').on('click', function(){
+	$('.services-links__item').removeClass('services-links__item--active');
+	$(this).parent().addClass('services-links__item--active');
+})

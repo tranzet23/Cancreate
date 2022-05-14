@@ -48,3 +48,14 @@
     }
   }
 }
+.header-additional{
+	display: none;
+}
+.header__black{
+	.header-main{
+		display: none;
+	}
+	.header-additional{
+		display: block;
+	}
+}
