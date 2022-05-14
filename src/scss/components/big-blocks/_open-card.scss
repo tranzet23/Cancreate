@@ -1,4 +1,8 @@
 .open-card {
+
+  .container {
+    max-width: none;
+  }
   &-top {
     position: relative;
     height: 100vh;
@@ -53,6 +57,20 @@
 
         &:last-child {
           margin-right: 0;
+        }
+
+        a {
+          font-weight: 300;
+          font-size: 12px;
+          line-height: 120%;
+          text-align: center;
+          text-transform: uppercase;
+          color: #FFFFFF;
+
+          &:hover {
+            color: #f7941d;
+            transition: all .3s
+          }
         }
       }
 

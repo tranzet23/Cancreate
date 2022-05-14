@@ -127,6 +127,7 @@ ul {
   padding: 0 40px;
   margin: 0 auto;
   width: 100%;
+  max-width: 1440px;
 
   @include mobile {
     padding: 0 15px;
@@ -199,3 +200,66 @@ p {
 .relative {
   position: relative !important;
 }
+.plus {
+  font-size: 68px;
+  letter-spacing: -.08em;
+  text-transform: uppercase;
+}
+
+.video-youtube {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+.video-youtube.video-youtube_overlay:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 5;
+}
+.video-youtube .video-youtube__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.video-youtube .video-youtube__content.video-youtube__content_hide-origin-play-btn {
+  width: 10000%;
+  height: 10000%;
+  transform: scale(0.01);
+  transform-origin: top left;
+}
+.video-youtube .video-youtube__content.video-youtube__content_hide-origin-play-btn::-moz-selection {
+  background-color: transparent;
+}
+.video-youtube .video-youtube__content.video-youtube__content_hide-origin-play-btn::selection {
+  background-color: transparent;
+}
+.video-youtube .video-youtube__new-play-btn {
+  max-width: 153px;
+  max-height: 153px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  background-image: url(https://erweb.ru/wp-content/uploads/2017/09/youtube-play.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  cursor: pointer;
+}
+

@@ -1,3 +1,40 @@
+@keyframes top-bottom {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes top-bottom2 {
+  from {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(10%);
+  }
+  50%{
+    transform: translateY(-30%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes bottom-top {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -11,17 +48,22 @@
   from {
     transform: translateX(0);
   }
+  50% {
+    transform: translateX(-800px);
+  }
   to {
-    transform: translateX(-3000px);
+    transform: translateX(0px);
   }
 }
 @keyframes move-line {
-
   from {
     transform: translateX(0);
   }
+  50% {
+    transform:translateX(-700px)
+  }
   to {
-    transform: translateX(-1000px);
+    transform: translateX(0);
   }
 }
 
@@ -33,6 +75,18 @@
   animation: infinite rotate linear 6s;
 }
 .bg-blur {
-  animation: 5s move-line;
+  animation: 6s move-line;
   animation-iteration-count: infinite;
 }
+.scroll-sec {
+  .triple-items .triple-item{
+    animation: infinite top-bottom linear 4s;
+  }
+  .triple-items .triple-item:nth-child(2){
+    animation: infinite bottom-top linear 4s;
+  }
+  .triple-items .triple-item:nth-child(3){
+    animation: infinite top-bottom2 linear 5s;
+  }
+}
+
