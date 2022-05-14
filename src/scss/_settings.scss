@@ -127,6 +127,7 @@ ul {
   padding: 0 40px;
   margin: 0 auto;
   width: 100%;
+  max-width: 1440px;
 
   @include mobile {
     padding: 0 15px;
@@ -198,4 +199,12 @@ p {
 }
 .relative {
   position: relative !important;
+
 }
+.plus {
+  font-size: 68px;
+  letter-spacing: -.08em;
+  text-transform: uppercase;
+}
+
+

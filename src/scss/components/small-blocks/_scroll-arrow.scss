@@ -1,0 +1,25 @@
+.scroll-top {
+  position: fixed;
+  width: 48px;
+  height: 100%;
+  right: 40px;
+  z-index: 20;
+  top: 700px;
+
+
+  .scroll-svg {
+    z-index: 10;
+    bottom: 150px;
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(255,255,255,.2);
+    @include flex-all-center;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+.wrapper-scroll {
+  position: relative;
+}
+
+
