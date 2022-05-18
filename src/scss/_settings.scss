@@ -129,6 +129,10 @@ ul {
   width: 100%;
   max-width: 1440px;
 
+  @include tablet {
+    padding: 0 20px;
+  }
+
   @include mobile {
     padding: 0 15px;
   }
@@ -205,5 +209,22 @@ p {
   font-size: 68px;
   letter-spacing: -.08em;
   text-transform: uppercase;
+}
+
+.none-mob {
+  @include mobile {
+    display: none !important;
+  }
+}
+.none-pc {
+  display: none !important;
+
+  @include mobile {
+    display: flex !important;
+  }
+}
+
+.opacity-0 {
+  opacity: 0 !important;
 }
 

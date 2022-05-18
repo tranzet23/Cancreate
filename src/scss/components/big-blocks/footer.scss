@@ -1,45 +1,20 @@
 .footer {
   padding-top: 30px;
-  padding-bottom: 100px;margin: 0 40px;
-
-  .container {
-    border-top: 1px solid rgba(255,255,255,.2);
-    padding: 0;
-    max-width: none;
-  }
-
-  &-menu {
-    padding-top: 30px;
-    ul {
-      display: flex;
-      align-items: center;
-
-      li {
-        margin-right: 24px;
-
-        &:last-child {
-          margin-right: 0;
-        }
-
-        a {
-          font-weight: 300;
-          font-size: 21px;
-          line-height: 100%;
-          color: #fff;
-
-          &:hover {
-            color: $color-orange;
-            transition: all .3s;
-          }
-
-
-        }
-      }
-    }
-  }
+  padding-bottom: 100px;
+  margin: 0 40px;
 
   &-block {
     display: flex;
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    p {
+      @include mobile {
+        margin-bottom: 20px;
+      }
+    }
   }
 
   &-bottom {
@@ -48,12 +23,107 @@
     align-items: center;
     justify-content: space-between;
 
+    @include media-max(1024) {
+      flex-direction: column-reverse;
+      padding-top: 50px;
+      align-items: flex-start;
+    }
+
+
     p {
       font-weight: 300;
       font-size: 14px;
       line-height: 15px;
       letter-spacing: 0.05em;
       opacity: 0.5;
+
+      @include media-max(400) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .services-bottom__links {
+    @include media-max(1024) {
+      padding-bottom: 30px;
+    }
+    a {
+      @include media-max(400) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  @include mobile {
+    padding-bottom: 40px;
+  }
+
+  @include media-max(1024) {
+    margin: 0 20px;
+  }
+
+  .container {
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    padding: 0;
+    max-width: none;
+  }
+
+  &-menu {
+    padding-top: 30px;
+
+    @include media-max(1024) {
+      border-bottom: 1px solid rgba(255, 255, 255, .2);
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+
+      @include media-max(600) {
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      li {
+        margin-right: 24px;
+
+        @include media-max(600) {
+          margin-right: 0;
+          width: 33.3333%;
+          margin-bottom: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        font-weight: 300;
+        font-size: 21px;
+        line-height: 100%;
+        color: #fff;
+
+        @include media-max(1024) {
+          font-weight: 300;
+          font-size: 16px;
+        }
+
+        &:hover {
+          color: $color-orange;
+          transition: all .3s;
+        }
+      }
     }
   }
 }
+
+
+
+
+
+
+

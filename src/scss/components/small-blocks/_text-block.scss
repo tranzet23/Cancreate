@@ -1,7 +1,15 @@
 .text-block {
   position: relative;
   padding-bottom: 90px;
-  p{
+  overflow: hidden;
+
+  @include tablet {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+
+  p {
     font-weight: 600;
     font-size: 180px;
     line-height: 100%;
@@ -9,10 +17,20 @@
     text-transform: uppercase;
     color: #121212;
 
+    @include tablet {
+      font-size: 96px;
+    }
+
     &:last-child {
-        -webkit-text-stroke: 2px var(--orange);
-        -webkit-text-fill-color: #000;
+      -webkit-text-stroke: 2px var(--orange);
+      -webkit-text-fill-color: #000;
     }
   }
 
+  .bg-blur {
+    top: -400px;
+    @include tablet {
+      top: -200px;
+    }
+  }
 }

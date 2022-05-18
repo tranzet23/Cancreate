@@ -78,9 +78,6 @@
   animation-iteration-count: infinite;
 }
 
-// .services__bg{
-// 	animation: 4s move-line infinite;
-// }
 .scroll-sec {
   .triple-items .triple-item{
     animation: infinite top-bottom linear 4s;
@@ -90,5 +87,11 @@
   }
   .triple-items .triple-item:nth-child(3){
     animation: infinite top-bottom2 linear 5s;
+  }
+}
+
+.triple-item {
+  @include mobile {
+    animation: none !important;
   }
 }

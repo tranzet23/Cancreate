@@ -12,7 +12,7 @@ $('.double-slider').slick({
     speed: 300,
     slidesToShow: 2,
     variableWidth: true,
-    autoplay: true
+    // autoplay: true
 });
 
 let body = document.querySelector('body')
@@ -343,20 +343,31 @@ $('.scroll-svg').click(function() {
 
 });
 
-$('[data-fancybox]').fancybox({
-    // Options will go here
-    buttons : [
-        'close'
-    ],
-    wheel : false,
-    transitionEffect: "slide",
-    // thumbs          : false,
-    // hash            : false,
-    loop            : true,
-    // keyboard        : true,
-    toolbar         : false,
-    // animationEffect : false,
-    // arrows          : true,
-    clickContent    : false
-});
+
+// $('[data-fancybox]').fancybox({
+//     // Options will go here
+//     buttons : [
+//         'close'
+//     ],
+//     wheel : false,
+//     transitionEffect: "slide",
+//     // thumbs          : false,
+//     // hash            : false,
+//     loop            : true,
+//     // keyboard        : true,
+//     toolbar         : false,
+//     // animationEffect : false,
+//     // arrows          : true,
+//     clickContent    : false
+// });
+
+// (function(jQuery){
+//
+//     // Original author's plugin code
+//     // ...
+//     jQuery("a.fancybox").fancybox({ ... }
+//     // ...
+//
+// })(jQuery.noConflict());
+
 

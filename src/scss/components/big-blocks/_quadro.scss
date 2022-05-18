@@ -15,7 +15,12 @@
     line-height: 120%;
     text-align: center;
     letter-spacing: -0.08em;
+
+    @include tablet {
+      font-size: 26px;
+    }
   }
+
   &-bg {
     position: absolute;
     height: 100%;
@@ -26,6 +31,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    @include tablet {
+      width: 100%;
+    }
   }
 
   &-item {
@@ -40,6 +48,10 @@
 .quadro-item.quadro-item-2 {
   top: 135px;
   left: 60%;
+
+  @include media-max(1400) {
+    left: 50%;
+  }
 }
 
 .quadro-item-3 {
@@ -55,4 +67,78 @@
 .quadro-item-5 {
   right: 190px;
   top: 50px;
+
+  @include media-max(1200) {
+    right: 0;
+  }
+}
+
+.quadro-item img {
+  @include media-max(1200) {
+    width: 70%;
+  }
+  @include tablet {
+    width: 40%;
+  }
+}
+
+.quadro-item-3 img {
+  @include tablet {
+    transform: rotate(-110deg);
+  }
+  @include mobile {
+    bottom: 0;
+    right: 0;
+    width: 310px;
+  }
+}
+
+.quadro-item.quadro-item-3 {
+  @include tablet {
+    bottom: 0;
+    left: 50px;
+  }
+  @include mobile {
+    bottom: 0;
+    right: auto;
+  }
+}
+
+.quadro-item.quadro-item-1 {
+  @include tablet {
+    top: 0;
+    left: 20px;
+  }
+}
+
+.quadro-item.quadro-item-5 {
+  @include tablet {
+    right: -70px;
+  }
+}
+
+.quadro-item.quadro-item-5 img {
+  @include tablet {
+    width: 60%;
+  }
+}
+
+.quadro-item.quadro-item-2 {
+  @include tablet {
+    top: 30%;
+  }
+
+  img {
+    @include tablet {
+      width: 100%;
+    }
+  }
+}
+
+.quadro-item.quadro-item-4 {
+  img {
+    @include tablet {
+      width: 80%;
+    }
+  }
 }
