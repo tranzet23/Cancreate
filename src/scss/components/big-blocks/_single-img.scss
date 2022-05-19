@@ -1,11 +1,6 @@
 .single-img {
   overflow: hidden;
-
-
-
   padding-bottom: 250px;
-
-
 
   &__container {
     display: flex;
@@ -22,6 +17,12 @@
         display: flex;
         transition: all .5s;
       }
+    }
+     img {
+       @include mobile {
+         height: 400px;
+         object-fit: cover;
+       }
     }
   }
 

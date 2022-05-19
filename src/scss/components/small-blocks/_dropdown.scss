@@ -64,14 +64,14 @@
 }
 
 .bg-blur {
-  background: #f7941d;
-  filter: blur(300px);
+  //background: #f7941d;
+  //filter: blur(300px);
   position: absolute;
   opacity: 1;
-  top: -110px;
+  top: 0;
   width: 320px;
   height: 300px;
-  right: 480px;
+  //right: 480px;
 }
 
 .dropdown-menu_top {
@@ -79,11 +79,23 @@
   width: 100%;
   padding: 0 40px;
 
+  @include tablet {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
   .contact-us {
     position: absolute;
     left: 40px;
     bottom: 60px;
     text-align: left;
+
+    @include tablet {
+      position: relative;
+      margin-top: 30px;
+      left: 0;
+    }
+
     span {
       font-weight: 300;
       font-size: 12px;

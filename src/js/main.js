@@ -12,7 +12,7 @@ $('.double-slider').slick({
     speed: 300,
     slidesToShow: 2,
     variableWidth: true,
-    autoplay: true
+    // autoplay: true
 });
 
 let body = document.querySelector('body')
@@ -322,16 +322,21 @@ $('.services-links__link').on('click', function(){
 	$('.services-links__item').removeClass('services-links__item--active');
 	$(this).parent().addClass('services-links__item--active');
 })
+
+
  // scroll-top
 $("document").ready(function($){
     var scrollBtn = $('.scroll-svg');
+    var scrollWrap = $('.scroll-top');
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 1000) {
             scrollBtn.addClass("doch");
+            scrollWrap.addClass("doch");
 
         } else {
             scrollBtn.removeClass("doch");
+            scrollWrap.removeClass("doch");
         }
     });
 });
@@ -343,20 +348,48 @@ $('.scroll-svg').click(function() {
 
 });
 
-$('[data-fancybox]').fancybox({
-    // Options will go here
-    buttons : [
-        'close'
-    ],
-    wheel : false,
-    transitionEffect: "slide",
-    // thumbs          : false,
-    // hash            : false,
-    loop            : true,
-    // keyboard        : true,
-    toolbar         : false,
-    // animationEffect : false,
-    // arrows          : true,
-    clickContent    : false
-});
 
+
+
+(function(){
+    function id(v){return document.getElementById(v); }
+    function loadbar() {
+        var preloaderPercent = id("preloader-percent"),
+            ovrl = id("preloader"),
+            img = document.images,
+            cImg = 0;
+
+        var ImgTotal = img.length;
+
+        function imgLoaded(){
+            cImg += 1;
+            preloaderPercent.innerHTML = ((100 / ImgTotal * cImg) << 0).toString();
+            if(cImg===ImgTotal) return doneLoading();
+        }
+
+        function doneLoading(){
+            ovrl.style.opacity = 0;
+            setTimeout(function(){
+                ovrl.style.display = "none";
+            }, 100);
+        }
+
+        preloaderPercent.innerHTML = '1';
+
+        setTimeout(function () {
+            if (ImgTotal) {
+                for(var i=0; i<ImgTotal; i++) {
+                    var tImg     = new Image();
+                    tImg.onload  = imgLoaded;
+                    tImg.onerror = imgLoaded;
+                    tImg.src     = img[i].src;
+                }
+            }
+            else {
+                preloaderPercent.innerHTML = '100';
+                doneLoading();
+            }
+        }, 500);
+    }
+    document.addEventListener('DOMContentLoaded', loadbar, false);
+}());

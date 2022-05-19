@@ -1,6 +1,14 @@
 .contact {
   padding-top: 285px;
   padding-bottom: 300px;
+  overflow: hidden;
+
+  @include tablet  {
+    padding-bottom: 200px;
+  }
+  @include mobile {
+    padding-bottom: 120px;
+  }
 
   h1 {
     font-weight: 400;
@@ -9,16 +17,33 @@
     letter-spacing: -0.08em;
     text-transform: uppercase;
     color: #FFFFFF;
+
+    @include tablet {
+      font-size: 70px;
+    }
+    @include mobile {
+      font-size: 48px;
+    }
   }
 
   &-content {
     display: flex;
     justify-content: space-between;
     padding-top: 190px;
+
+    @include tablet {
+      padding-top: 115px;
+      flex-direction: column;
+    }
   }
 
   &-information {
     max-width: 480px;
+    margin-right: 20px;
+
+    @include tablet {
+      margin: 0 auto;
+    }
 
     div {
       margin-top: 90px;
@@ -40,6 +65,10 @@
       line-height: 120%;
       letter-spacing: -0.08em;
       color: #FFFFFF;
+
+      @include tablet {
+        font-size: 20px;
+      }
     }
 
     span {
@@ -53,6 +82,11 @@
   &-form {
     max-width: 670px;
     width: 100%;
+
+  @include tablet {
+    max-width: none;
+    width: 100%;
+  }
   }
 }
 
@@ -67,6 +101,10 @@ form#contact-form {
     letter-spacing: -0.08em;
     color: #FFFFFF;
     margin-bottom: 50px;
+
+    @include media-max(1300) {
+      font-size: 18px;
+    }
   }
 
 
@@ -141,6 +179,18 @@ textarea::placeholder {
   padding-bottom: 32px;
   border-bottom: 1px solid rgba(255,255,255,.2);
 
+  .accept-policy {
+    @include mobile {
+      margin-top: 20px;
+    }
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   p {
     margin-bottom: 0 !important;
   }
@@ -185,3 +235,17 @@ textarea::placeholder {
   transition: all .3s;
 }
 
+#contact-form {
+  @include tablet {
+    margin-top: 50px;
+  }
+
+  button {
+    @include mobile {
+      margin: 0 auto;
+    }
+  }
+}
+.title-form {
+  font-size: 28px !important;
+}
