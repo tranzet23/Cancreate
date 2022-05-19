@@ -5,6 +5,11 @@
   right: 40px;
   z-index: 20;
   top: 700px;
+  display: none !important;
+
+  &.doch {
+    display: block !important;
+  }
 
 
 
@@ -30,5 +35,4 @@
 
 .scroll-svg.doch {
   display: flex !important;
-
 }
