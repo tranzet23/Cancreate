@@ -69,9 +69,6 @@
     }
   }
 
-  &__scroll {
-    width: 33.333333%;
-  }
 
   &__scroll-inner {
     position: relative;
@@ -118,8 +115,22 @@
   }
 }
 
-.sound, .scroll, .cookies {
-  width: 33.3333%;
+.sound, .hero__scroll, .cookies {
+ position: absolute;
+}
+.cookies {
+  bottom: 50px;
+  left: 40px;
+}
+.sound {
+  right: 50px;
+  bottom: 30px;
+}
+.hero__scroll {
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%);
+  width: max-content;
 }
 
 .container-bottom-a {
