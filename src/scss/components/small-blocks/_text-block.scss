@@ -1,5 +1,6 @@
 .text-block {
   position: relative;
+  padding-top: 120px;
   padding-bottom: 90px;
   overflow: hidden;
 
@@ -28,7 +29,7 @@
   }
 
   .bg-blur {
-    top: -400px;
+    top: -290px;
     @include tablet {
       top: -200px;
     }
