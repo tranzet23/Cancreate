@@ -2,7 +2,7 @@ module.exports = function animations() {
     document.addEventListener('DOMContentLoaded', function () {
         gsap.registerPlugin(ScrollTrigger);
 
-        let heroSection = document.querySelector('section.hero') && false;
+        let heroSection = document.querySelector('section.hero') || false;
         let videoEl = document.querySelector('.video-main video');
         let mainText = document.querySelector('section.main-text');
         let scrollProgressCircle = document.querySelector('.hero__scroll-inner svg circle:nth-child(2)');
