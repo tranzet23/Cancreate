@@ -1,11 +1,12 @@
-module.exports = function cursor () {
-    let customCursorBlock = document.querySelectorAll('.custom-cursor-js') || false,
-        cursor = document.querySelector('.cursor'),
-        cursorScale = document.querySelectorAll('.cursor-scale'),
-        mouseX = 0,
-        mouseY = 0;
+module.exports = function cursor() {
+    let customCursorBlock = document.querySelectorAll('.custom-cursor-js') || false;
 
     if (customCursorBlock) {
+        let cursor = createCursorElement(),
+            cursorScale = document.querySelectorAll('.cursor-scale'),
+            mouseX = 0,
+            mouseY = 0;
+
         gsap.to({}, 0.016, {
             repeat: -1,
 
@@ -45,5 +46,13 @@ module.exports = function cursor () {
                 }
             });
         });
+    }
+
+    function createCursorElement() {
+        let cursor = document.createElement("div");
+        cursor.classList.add("cursor");
+        document.querySelector('main').appendChild(cursor);
+
+        return cursor;
     }
 }
