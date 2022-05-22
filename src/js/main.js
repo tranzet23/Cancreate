@@ -1,7 +1,9 @@
 const animations = require('./modules/animations');
 const scrolltop = require('./modules/scrollto');
+const cursor = require('./modules/cursor');
 animations();
 scrolltop();
+cursor();
 
 // slider-works
 $('.works__slider').slick({
