@@ -231,4 +231,13 @@ p {
 .scroll-container {
   position: relative;
   width: 100%;
+  height: 360vh;
+}
+
+.sticky-container {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
 }

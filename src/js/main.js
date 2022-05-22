@@ -1,5 +1,7 @@
 const animations = require('./modules/animations');
+const scrolltop = require('./modules/scrollto');
 animations();
+scrolltop();
 
 // slider-works
 $('.works__slider').slick({
@@ -328,31 +330,6 @@ choiceBtn.forEach(btn => {
 $('.services-links__link').on('click', function () {
     $('.services-links__item').removeClass('services-links__item--active');
     $(this).parent().addClass('services-links__item--active');
-})
-
-
-// scroll-top
-$("document").ready(function ($) {
-    var scrollBtn = $('.scroll-svg');
-    var scrollWrap = $('.scroll-top');
-
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 1000) {
-            scrollBtn.addClass("doch");
-            scrollWrap.addClass("doch");
-
-        } else {
-            scrollBtn.removeClass("doch");
-            scrollWrap.removeClass("doch");
-        }
-    });
-});
-$('.scroll-svg').click(function () {
-    $('html, body').animate({
-        scrollTop: 0
-    }, 800);
-    return false;
-
 });
 
 
