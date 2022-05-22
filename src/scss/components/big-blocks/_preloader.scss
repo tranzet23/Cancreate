@@ -1,0 +1,35 @@
+.preloader {
+  position: fixed;
+  height: 100vh;
+  background: #000;
+  z-index: 10000;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: opacity 1.2s ease;
+
+  &-count {
+    width: max-content;
+    position: absolute;
+    bottom: 50px;
+    right: 40px;
+    p{
+      span {
+        font-family: 'Resolve Sans', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 120px;
+        line-height: 100%;
+        text-align: right;
+        -webkit-text-stroke: 1px var(--orange);
+        -webkit-text-fill-color: #000;
+      }
+    }
+  }
+  .preloader-logo {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+  }
+}

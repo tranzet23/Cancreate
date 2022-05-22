@@ -24,11 +24,30 @@
 		align-items: center;
 		column-gap: 20px;
 		justify-content: center;
+		row-gap: 50px;
+		&:nth-child(1){
+			.stats__item:nth-child(2){
+				order: -1;
+			}
+			.stats__item:nth-child(3){
+				order: 1;
+			}
+		}
+		@include media-max(1024) {
+			flex-wrap: wrap;
+		}
 		&:nth-child(2){
 			margin-top: 20px;
+			@include media-max(600) {
+				margin-top: 50px;
+			}
 			.stats__item-text{
 				bottom: auto;
 				top: 20px;
+				@include media-max(600) {
+					top: auto;
+					bottom: 20px;
+				}
 			}
 		}
 	}
@@ -49,6 +68,20 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		@include media-max(600) {
+			display: block;
+			height: 170px;
+		}
+		img{
+			object-fit: cover;
+			height: 325px;
+			background-position: center center;
+			@include media-max(600) {
+				height: 170px;
+				width: 100%;
+				display: block;
+			}
+		}
 	}
 	&__item-number{
 		font-weight: 400;

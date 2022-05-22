@@ -1,15 +1,22 @@
 .info {
   overflow: hidden;
-  .container {
-    padding: 0;
-    width: 100vw;
-  }
 
   &-items {
     height: 800px;
     width: 100%;
     display: flex;
 
+    @include media-max(1300) {
+      height: 600px;
+    }
+
+    @include tablet {
+      height: 450px;
+    }
+    @include mobile {
+      flex-wrap: wrap;
+      height: 900px;
+    }
   }
 
   &-item {
@@ -19,6 +26,11 @@
     background-image: url("../img/unsplash_ruQHpukrN7c.png");
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include mobile {
+      width: 50%;
+      height: 450px;
+    }
 
     &:nth-child(2) {
       background-image: url("../img/unsplash_LGblf4EH4yk.png");
@@ -86,12 +98,20 @@
       transition: all .3s;
       transform: translate(0%, 0);
       z-index: 2;
+
+      @include mobile {
+        left: 10px;
+      }
     }
 
     p {
       font-weight: 400;
       font-size: 38px;
       line-height: 100%;
+
+      @include mobile {
+    font-size: 22px;
+      }
     }
 
     button {

@@ -5,6 +5,12 @@
   right: 40px;
   z-index: 20;
   top: 700px;
+  display: none !important;
+
+  &.doch {
+    display: block !important;
+  }
+
 
 
   .scroll-svg {
@@ -16,10 +22,17 @@
     @include flex-all-center;
     border-radius: 50%;
     cursor: pointer;
+    display: none;
+
+    &:hover {
+      border: 1px solid #f7941d;
+    }
   }
 }
 .wrapper-scroll {
   position: relative;
 }
 
-
+.scroll-svg.doch {
+  display: flex !important;
+}

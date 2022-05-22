@@ -1,8 +1,17 @@
 .services-links{
 	margin-bottom: 180px;
+	overflow: hidden;
 	&__list{
 		margin: 0;
 		border-top: 1px solid rgba(255,255,255, 0.2);
+		@include media-max(768) {
+			border: none;
+		}
+	}
+	.container{
+		@include media-max(768) {
+			padding: 0 0 0 20px;
+		}
 	}
 	&__link{
 		color: inherit;
@@ -36,6 +45,27 @@
 			opacity: 1;
 			transition: all .3s;
 			height: 400px;
+			object-fit: cover;
+			@include media-max(768) {
+				height: 239px;
+				max-width: 359px;
+				
+			}
+		}
+		@include media-max(1350) {
+			font-size: 60px;
+		}
+		@include media-max(1024) {
+			justify-content: flex-start;
+			flex-direction: column;
+		}
+		@include media-max(768) {
+			padding: 18px 0;
+			font-size: 50px;
+		}
+		@include media-max(600) {
+			padding: 18px 0;
+			font-size: 40px;
 		}
 	}
 	&__text{
@@ -79,6 +109,10 @@
 		right: 230px;
 		opacity: 0;
 		height: 0%;
+		@include media-max(768) {
+			right: -50px;
+			
+		}
 	}
 	&__text-wrapper{
 		position: relative;
@@ -93,10 +127,20 @@
 		text-transform: none;
 		max-width: 480px;
 		display: none;
+		@include media-max(1350) {
+			font-size: 14px;
+			max-width: 333px;
+		}
+		@include media-max(1024) {
+			margin-top: 23px;
+		}
 	}
 	&__item-close{
 		display: flex;
 		opacity: 0;
+		@include media-max(1024) {
+			display: none;
+		}
 	}
 	.services-links__item.services-links__item--active .services-links__item-accrodion-descr{
 		display: block;

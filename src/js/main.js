@@ -12,7 +12,7 @@ $('.double-slider').slick({
     speed: 300,
     slidesToShow: 2,
     variableWidth: true,
-    autoplay: true
+    // autoplay: true
 });
 
 let body = document.querySelector('body')
@@ -55,7 +55,7 @@ try{
 				dropHolder.classList.toggle('active');
 			});
 		});
-	};
+	}
 	initSelect(navigationSelect);
 }
 catch (e) {
@@ -89,7 +89,6 @@ if(document.querySelector('.accept-policy span.yes')) {
 AOS.init({
     duration: 1200,
 })
-
 
 //scroll section
 
@@ -324,6 +323,17 @@ $('.services-links__link').on('click', function(){
 	$(this).parent().addClass('services-links__item--active');
 })
 
+const btnCloseAccordion = document.querySelectorAll('.services-links__item-close');
+const accordDescr = document.querySelectorAll('.services-links__item')
+
+btnCloseAccordion.forEach(btn => {
+	btn.addEventListener('click', function(){
+		accordDescr.forEach(item =>{
+			item.classList.remove('services-links__item--active')
+		})
+	})
+})
+
 
 // Parallax	
 
@@ -336,3 +346,72 @@ for (let i = 0; i < bg.length; i++){
         bg[i].style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
     });    
 }
+ // scroll-top
+$("document").ready(function($){
+    var scrollBtn = $('.scroll-svg');
+    var scrollWrap = $('.scroll-top');
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1000) {
+            scrollBtn.addClass("doch");
+            scrollWrap.addClass("doch");
+
+        } else {
+            scrollBtn.removeClass("doch");
+            scrollWrap.removeClass("doch");
+        }
+    });
+});
+$('.scroll-svg').click(function() {
+    $('html, body').animate({
+        scrollTop: 0
+    }, 800);
+    return false;
+
+});
+
+
+
+
+(function(){
+    function id(v){return document.getElementById(v); }
+    function loadbar() {
+        var preloaderPercent = id("preloader-percent"),
+            ovrl = id("preloader"),
+            img = document.images,
+            cImg = 0;
+
+        var ImgTotal = img.length;
+
+        function imgLoaded(){
+            cImg += 1;
+            preloaderPercent.innerHTML = ((100 / ImgTotal * cImg) << 0).toString();
+            if(cImg===ImgTotal) return doneLoading();
+        }
+
+        function doneLoading(){
+            ovrl.style.opacity = 0;
+            setTimeout(function(){
+                ovrl.style.display = "none";
+            }, 100);
+        }
+
+        preloaderPercent.innerHTML = '1';
+
+        setTimeout( function () {
+            if (ImgTotal) {
+                for(var i=0; i<ImgTotal; i++) {
+                    var tImg     = new Image();
+                    tImg.onload  = imgLoaded;
+                    tImg.onerror = imgLoaded;
+                    tImg.src     = img[i].src;
+                }
+            }
+            else {
+                preloaderPercent.innerHTML = '100';
+                doneLoading();
+            }
+        }, 500);
+    }
+    document.addEventListener('DOMContentLoaded', loadbar, false);
+}());

@@ -2,5 +2,15 @@
 	&__picture{
 		padding-bottom: 128px;
 		text-align: center;
+		img{
+			@include media-max(768) {
+				object-fit: cover;
+				background-position: center;
+				height: 461px;
+			}
+		}
+		@include media-max(1024) {
+			padding-bottom: 52px;
+		}
 	}
 }

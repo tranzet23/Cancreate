@@ -1,6 +1,7 @@
 .banner{
 	position: relative;
 	padding-top: 128px;
+	white-space: nowrap;
 	// min-height: 700px;
 	&::before{
 		position: absolute;
@@ -17,5 +18,8 @@
 	&__text-border{
 		position: relative;
 		left: -81px;
+		@include media-max(768) {
+			left: -250px;
+		}
 	}
 }

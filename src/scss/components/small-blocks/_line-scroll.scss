@@ -4,6 +4,10 @@
   width: 1px;
   background: rgba(255,255,255,.2);
 
+  @include tablet {
+    margin-top: 80px;
+  }
+
   &--wrap {
     height: 100%;
     width: 100%;

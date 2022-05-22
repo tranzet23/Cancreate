@@ -3,4 +3,8 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin-bottom: 130px;
+	@include media-max(768) {
+		height: 528px;
+		margin-bottom: 62px;
+	}
 }
