@@ -1,9 +1,11 @@
 const animations = require('./modules/animations');
 const scrolltop = require('./modules/scrollto');
 const cursor = require('./modules/cursor');
+const loadPosts = require('./modules/scrollingPosts');
 animations();
 scrolltop();
 cursor();
+loadPosts();
 
 // slider-works
 $('.works__slider').slick({
@@ -379,12 +381,6 @@ $("document").ready(function($){
         }
     });
 });
-$('.scroll-svg').click(function() {
-    $('html, body').animate({
-        scrollTop: 0
-    }, 800);
-    return false;
-})
 
 (function(){
     function id(v){return document.getElementById(v); }
