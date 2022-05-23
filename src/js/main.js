@@ -18,8 +18,14 @@ $('.double-slider').slick({
     infinite: true,
     speed: 300,
     slidesToShow: 2,
-    variableWidth: true,
-    // autoplay: true
+    autoplay: true
+});
+
+$('.picture__slider').slick({
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+	autoplay: true
 });
 
 let body = document.querySelector('body')
@@ -329,11 +335,56 @@ choiceBtn.forEach(btn => {
 
 // Accordion	
 
-$('.services-links__link').on('click', function () {
-    $('.services-links__item').removeClass('services-links__item--active');
-    $(this).parent().addClass('services-links__item--active');
-});
+$('.services-links__link').on('click', function(){
+	$('.services-links__item').removeClass('services-links__item--active');
+	$(this).parent().addClass('services-links__item--active');
+})
 
+const btnCloseAccordion = document.querySelectorAll('.services-links__item-close');
+const accordDescr = document.querySelectorAll('.services-links__item')
+
+btnCloseAccordion.forEach(btn => {
+	btn.addEventListener('click', function(){
+		accordDescr.forEach(item =>{
+			item.classList.remove('services-links__item--active')
+		})
+	})
+})
+
+
+// Parallax	
+
+ 
+let bg = document.querySelectorAll('.about-canc__photo');
+for (let i = 0; i < bg.length; i++){
+    window.addEventListener('mousemove', function(e) { 
+        let x = e.clientX / window.innerWidth;
+        let y = e.clientY / window.innerHeight;     
+        bg[i].style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
+    });    
+}
+ // scroll-top
+$("document").ready(function($){
+    var scrollBtn = $('.scroll-svg');
+    var scrollWrap = $('.scroll-top');
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1000) {
+            scrollBtn.addClass("doch");
+            scrollWrap.addClass("doch");
+
+        } else {
+            scrollBtn.removeClass("doch");
+            scrollWrap.removeClass("doch");
+        }
+    });
+});
+$('.scroll-svg').click(function() {
+    $('html, body').animate({
+        scrollTop: 0
+    }, 800);
+    return false;
+})
 
 (function(){
     function id(v){return document.getElementById(v); }
@@ -377,3 +428,5 @@ $('.services-links__link').on('click', function () {
     }
     document.addEventListener('DOMContentLoaded', loadbar, false);
 }());
+
+

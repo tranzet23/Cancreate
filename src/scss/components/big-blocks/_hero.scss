@@ -125,16 +125,29 @@
 .cookies {
   bottom: 50px;
   left: 40px;
+
+  @include media-max(1024) {
+    bottom: 20px;
+    left: 20px;
+  }
 }
 .sound {
   right: 50px;
   bottom: 30px;
+
+  @include media-max(1024) {
+    bottom: 150px;
+  }
 }
 .hero__scroll {
   bottom: 30px;
   left: 50%;
   transform: translate(-50%);
   width: max-content;
+
+  @include media-max(1024) {
+    bottom: 130px;
+  }
 }
 
 .container-bottom-a {

@@ -3,4 +3,14 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin-bottom: 130px;
+	@include media-max(768) {
+		height: 528px;
+		margin-bottom: 62px;
+	}
+	&__slider-item{
+		text-align: center;
+	}
+	.slick-slide img{
+		margin: 0 auto;
+	}
 }

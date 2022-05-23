@@ -1,5 +1,8 @@
 .about-descr{
 	padding-bottom: 128px;
+	@include media-max(1024) {
+		padding-bottom: 90px;
+	}
 	&__inner{
 		display: flex;
 		flex-direction: column;
@@ -24,5 +27,9 @@
 		text-transform: uppercase;
 		color: #FFFFFF;
 		margin-bottom: 48px;
+		@include media-max(600) {
+			font-size: 64px;
+			margin-bottom: 31px;
+		}
 	}
 }

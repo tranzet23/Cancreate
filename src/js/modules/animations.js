@@ -2,11 +2,12 @@ module.exports = function animations() {
     document.addEventListener('DOMContentLoaded', function () {
         gsap.registerPlugin(ScrollTrigger);
 
-        let heroSection = document.querySelector('section.hero');
+        let heroSection = document.querySelector('section.hero') || false;
         let videoEl = document.querySelector('.video-main video');
         let mainText = document.querySelector('section.main-text');
         let scrollProgressCircle = document.querySelector('.hero__scroll-inner svg circle:nth-child(2)');
 
+        if(heroSection) {
             gsap.timeline({
                 scrollTrigger: {
                     trigger: ".scroll-container",
@@ -51,18 +52,19 @@ module.exports = function animations() {
                 .delay(1)
                 .to('.main-text .container p', {autoAlpha: 0})
 
-        gsap.timeline({
-            scrollTrigger: {
-                trigger: '.scroll-container',
-                start: "70% 80%",
-                end: "bottom top",
-                scrub: 2,
-            }
-        })
-            .set('.line-scroll .line-scroll--el', {y: '-=101%', opacity: 1})
-            .to('.line-scroll .line-scroll--el', {y: '+=190%', duration: 0.4}, 0)
-            .to('.main-text .line-scroll', {y: '+=60%'}, 0)
-            .to(mainText, {autoAlpha: 0})
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: '.scroll-container',
+                    start: "70% 80%",
+                    end: "bottom top",
+                    scrub: 2,
+                }
+            })
+                .set('.line-scroll .line-scroll--el', {y: '-=101%', opacity: 1})
+                .to('.line-scroll .line-scroll--el', {y: '+=190%', duration: 0.4}, 0)
+                .to('.main-text .line-scroll', {y: '+=60%'}, 0)
+                .to(mainText, {autoAlpha: 0})
+        }
     });
 
 }
