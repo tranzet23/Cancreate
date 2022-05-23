@@ -428,3 +428,12 @@ $("document").ready(function($){
 }());
 
 
+$('#audio-control').click(function(){
+    if( $("#video-main").prop('muted') ) {
+        $("#video-main").prop('muted', false);
+
+        // or toggle class, style it with a volume icon sprite, change background-position
+    } else {
+        $("#video-main").prop('muted', true);
+    }
+});
