@@ -95,3 +95,7 @@
     animation: none !important;
   }
 }
+
+.services__bg:before{
+	animation: infinite 6s move-line;
+}
