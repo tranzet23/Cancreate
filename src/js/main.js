@@ -2,10 +2,12 @@ const animations = require('./modules/animations');
 const scrolltop = require('./modules/scrollto');
 const cursor = require('./modules/cursor');
 const loadPosts = require('./modules/scrollingPosts');
+const aboutProjectScrollAnimations = require('./modules/about-project-animations');
 animations();
 scrolltop();
 cursor();
 loadPosts();
+aboutProjectScrollAnimations();
 
 // slider-works
 $('.works__slider').slick({
@@ -426,3 +428,12 @@ $("document").ready(function($){
 }());
 
 
+$('#audio-control').click(function(){
+    if( $("#video-main").prop('muted') ) {
+        $("#video-main").prop('muted', false);
+
+        // or toggle class, style it with a volume icon sprite, change background-position
+    } else {
+        $("#video-main").prop('muted', true);
+    }
+});

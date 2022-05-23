@@ -1,6 +1,7 @@
 .blog {
   height: 100vh;
   padding-top: 390px;
+  overflow: hidden;
 
   @include tablet {
     min-height: 600px;
@@ -20,6 +21,10 @@
     letter-spacing: -0.08em;
     text-transform: uppercase;
     color: #FFFFFF;
+
+    @include mobile {
+      font-size: 64px;
+    }
   }
 
   &-top-inner {
@@ -100,6 +105,7 @@
 
     &__wrap {
       display: flex;
+      width: 100%;
 
       @include mobile {
         align-items: center;
@@ -114,12 +120,12 @@
 
 .blog-cards-wrap {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: 100%;
   gap: 100px;
 }
 
 .blog-card-item {
-  grid-column: span 12;
+  grid-column: 1/-1;
 }
 
 .blog-card__img {

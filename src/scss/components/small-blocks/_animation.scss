@@ -77,21 +77,3 @@
   animation: 6s move-line;
   animation-iteration-count: infinite;
 }
-
-.scroll-sec {
-  .triple-items .triple-item{
-    animation: infinite top-bottom linear 4s;
-  }
-  .triple-items .triple-item:nth-child(2){
-    animation: infinite bottom-top linear 4s;
-  }
-  .triple-items .triple-item:nth-child(3){
-    animation: infinite top-bottom2 linear 5s;
-  }
-}
-
-.triple-item {
-  @include mobile {
-    animation: none !important;
-  }
-}
