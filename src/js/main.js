@@ -2,10 +2,12 @@ const animations = require('./modules/animations');
 const scrolltop = require('./modules/scrollto');
 const cursor = require('./modules/cursor');
 const loadPosts = require('./modules/scrollingPosts');
+const aboutProjectScrollAnimations = require('./modules/about-project-animations');
 animations();
 scrolltop();
 cursor();
 loadPosts();
+aboutProjectScrollAnimations();
 
 // slider-works
 $('.works__slider').slick({
