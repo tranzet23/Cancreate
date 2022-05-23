@@ -17,6 +17,12 @@
 			text-transform: uppercase;
 			color: #FFFFFF;
 			padding-left: 210px;
+			@include media-max(768) {
+				padding-left: 100px;
+			}
+			@include media-max(550) {
+				padding-left: 50px;
+			}
 		}
 	}
 	&__row{
@@ -27,10 +33,15 @@
 		row-gap: 50px;
 		&:nth-child(1){
 			.stats__item:nth-child(2){
-				order: -1;
+				@include media-max(700) {
+					order: -1;
+				}
+				
 			}
 			.stats__item:nth-child(3){
-				order: 1;
+				@include media-max(700) {
+					order: 1;
+				}
 			}
 		}
 		@include media-max(1024) {

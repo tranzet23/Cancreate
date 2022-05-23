@@ -7,6 +7,11 @@
 }
 
 .icon-item {
+  svg {
+    @include media-max(550) {
+      width: 60px !important;
+    }
+  }
   &:hover {
     svg {
       color: #F7941D;

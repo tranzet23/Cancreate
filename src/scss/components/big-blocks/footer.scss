@@ -85,7 +85,7 @@
       }
 
       li {
-        margin-right: 24px;
+        padding-right: 24px;
 
         @include media-max(600) {
           margin-right: 0;

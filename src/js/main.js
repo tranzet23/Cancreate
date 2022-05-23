@@ -1,3 +1,10 @@
+const animations = require('./modules/animations');
+const scrolltop = require('./modules/scrollto');
+const cursor = require('./modules/cursor');
+animations();
+scrolltop();
+cursor();
+
 // slider-works
 $('.works__slider').slick({
     infinite: true,
@@ -11,8 +18,14 @@ $('.double-slider').slick({
     infinite: true,
     speed: 300,
     slidesToShow: 2,
-    variableWidth: true,
-    // autoplay: true
+    autoplay: true
+});
+
+$('.picture__slider').slick({
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+	autoplay: true
 });
 
 let body = document.querySelector('body')
@@ -36,34 +49,36 @@ burgerBtn.addEventListener('click', function () {
 // onmousemove = function(e){console.log("mouse location:", e.clientX, e.clientY)}
 
 //dropdown
-try{
-	let navigationSelect = document.querySelector('.select-wrapper');
-	function initSelect(elem){
-		var selectHolder = elem.querySelector('.holder');
-		var selectOptions = elem.querySelectorAll('.dropdownOption li');
-		var dropHolder = elem.querySelector('.dropdown');
-		var selectedOption = selectOptions[0];
-		selectedOption.classList.add('current');
-		selectHolder.addEventListener('click', function () {
-			dropHolder.classList.toggle('active');  });
-		selectOptions.forEach(function(currentElement) {
-			currentElement.addEventListener('click', function(){
-				selectedOption.classList.remove('current');
-				selectedOption = currentElement;
-				currentElement.classList.add('current');
-				selectHolder.innerHTML = currentElement.innerHTML;
-				dropHolder.classList.toggle('active');
-			});
-		});
-	}
-	initSelect(navigationSelect);
-}
-catch (e) {
+try {
+    let navigationSelect = document.querySelector('.select-wrapper');
+
+    function initSelect(elem) {
+        var selectHolder = elem.querySelector('.holder');
+        var selectOptions = elem.querySelectorAll('.dropdownOption li');
+        var dropHolder = elem.querySelector('.dropdown');
+        var selectedOption = selectOptions[0];
+        selectedOption.classList.add('current');
+        selectHolder.addEventListener('click', function () {
+            dropHolder.classList.toggle('active');
+        });
+        selectOptions.forEach(function (currentElement) {
+            currentElement.addEventListener('click', function () {
+                selectedOption.classList.remove('current');
+                selectedOption = currentElement;
+                currentElement.classList.add('current');
+                selectHolder.innerHTML = currentElement.innerHTML;
+                dropHolder.classList.toggle('active');
+            });
+        });
+    }
+
+    initSelect(navigationSelect);
+} catch (e) {
 
 }
 
 //accept
-if(document.querySelector('.accept-policy span.yes')) {
+if (document.querySelector('.accept-policy span.yes')) {
     let acceptBlockElYes = document.querySelector('.accept-policy span.yes');
     let acceptBlockElNo = document.querySelector('.accept-policy span.no');
 
@@ -71,7 +86,7 @@ if(document.querySelector('.accept-policy span.yes')) {
         if (acceptBlockElNo.classList.contains('active')) {
             acceptBlockElNo.classList.remove('active')
             acceptBlockElYes.classList.add('active')
-        }else {
+        } else {
             acceptBlockElYes.classList.add('active')
         }
     })
@@ -79,7 +94,7 @@ if(document.querySelector('.accept-policy span.yes')) {
         if (acceptBlockElYes.classList.contains('active')) {
             acceptBlockElYes.classList.remove('active')
             acceptBlockElNo.classList.add('active')
-        }else {
+        } else {
             acceptBlockElNo.classList.toggle('active')
         }
     })
@@ -95,10 +110,10 @@ AOS.init({
 //count number
 let statsSection = document.querySelector('.stats')
 
-if(statsSection) {
+if (statsSection) {
     statsSection.addEventListener('mouseover', function () {
         $('.stats__item-number').each(function () {
-            $(this).prop('Counter',0).animate({
+            $(this).prop('Counter', 0).animate({
                 Counter: $(this).text()
             }, {
                 duration: 4000,
@@ -114,7 +129,7 @@ if(statsSection) {
 //triple-section
 
 let tripleSection = document.querySelector('.triple')
-if(tripleSection) {
+if (tripleSection) {
     tripleSection.addEventListener('mouseover', function () {
         tripleSection.classList.add('scroll-sec')
     })
@@ -124,7 +139,7 @@ if(tripleSection) {
 }
 
 //video
-try{
+try {
     function video() {
         const player = document.querySelector('.player');
         const video = player.querySelector('.viewer');
@@ -204,6 +219,7 @@ try{
             currentTime.textContent = `${displayTime(video.currentTime)} /`;
             duration.textContent = `${displayTime(video.duration)}`;
         }
+
 // Calculate display time format
         function displayTime(time) {
             const minutes = Math.floor(time / 60);
@@ -299,18 +315,19 @@ try{
                 });
             }
         }
+
         screen_size.addEventListener('click', changeScreenSize);
 
     }
+
     video();
-}
-catch {
+} catch {
 
 }
 
-const choiceBtn  =  document.querySelectorAll('.choice__btn');
+const choiceBtn = document.querySelectorAll('.choice__btn');
 
-choiceBtn.forEach( btn => {
+choiceBtn.forEach(btn => {
     btn.addEventListener('click', () => {
         btn.classList.toggle('color-flex')
     })
@@ -367,11 +384,7 @@ $('.scroll-svg').click(function() {
         scrollTop: 0
     }, 800);
     return false;
-
-});
-
-
-
+})
 
 (function(){
     function id(v){return document.getElementById(v); }
@@ -398,7 +411,7 @@ $('.scroll-svg').click(function() {
 
         preloaderPercent.innerHTML = '1';
 
-        setTimeout( function () {
+        setTimeout(function () {
             if (ImgTotal) {
                 for(var i=0; i<ImgTotal; i++) {
                     var tImg     = new Image();
@@ -415,3 +428,5 @@ $('.scroll-svg').click(function() {
     }
     document.addEventListener('DOMContentLoaded', loadbar, false);
 }());
+
+

@@ -1,7 +1,10 @@
 .double-slider {
   min-height: 800px;
   padding-bottom: 200px;
-
+	@include mobile(){
+		min-height: auto;
+		height: max-content;
+	}
   &-inner {
     max-width: 1360px;
     margin: 0 auto;
