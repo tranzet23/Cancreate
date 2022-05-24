@@ -1,6 +1,7 @@
 .blog {
   height: 100vh;
   padding-top: 390px;
+  overflow: hidden;
 
   @include tablet {
     min-height: 600px;
@@ -20,6 +21,10 @@
     letter-spacing: -0.08em;
     text-transform: uppercase;
     color: #FFFFFF;
+
+    @include mobile {
+      font-size: 64px;
+    }
   }
 
   &-top-inner {
@@ -56,17 +61,26 @@
   }
 
   &-card-item {
-    margin-bottom: 95px;
-
     &:hover {
-      .blog-card-content {
-        border-top: 1px solid #f7941d;
-        transition: all .3s;
-
-        @include mobile {
-          border-top: none;
-        }
+      .blog-card__img img{
+        transform: scale(1.25);
       }
+
+      .blog-card-content:before {
+        width: 100%;
+      }
+    }
+
+    &:nth-child(2n) {
+      .blog-card-content:before {
+        right: auto;
+        left: 0;
+      }
+    }
+  }
+
+  &-card-item {
+    &:hover {
       .blog-card-title p {
         color: #f7941d;
         transition: all .3s;
@@ -91,6 +105,7 @@
 
     &__wrap {
       display: flex;
+      width: 100%;
 
       @include mobile {
         align-items: center;
@@ -103,7 +118,18 @@
   }
 }
 
+.blog-cards-wrap {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 100px;
+}
+
+.blog-card-item {
+  grid-column: 1/-1;
+}
+
 .blog-card__img {
+  overflow: hidden;
   max-width: 555px;
   width: 100%;
   height: 414px;
@@ -118,14 +144,28 @@
   img {
     width: 100%;
     height: 100%;
+    transition: transform 750ms cubic-bezier(0.61, 1, 0.88, 1) 0s;
   }
 }
 
 .blog-card-content {
+  position: relative;
   margin-left: 50px;
   width: 100%;
   border-top: 1px solid rgba(255,255,255,.2);
   padding-top: 50px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 0;
+    height: 1px;
+    background-color: #f7941d;
+    transition: width .35s ease-out;
+  }
 
   @include mobile {
     border-top: none;
