@@ -4,7 +4,8 @@
   &-items {
     height: 800px;
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 
     @include media-max(1300) {
       height: 600px;
@@ -14,10 +15,11 @@
       height: 450px;
     }
     @include mobile {
-      flex-wrap: wrap;
+      grid-template-columns: repeat(4, 1fr);
       height: 900px;
     }
   }
+
   &-item-bg {
     position: absolute;
     top: 0;
@@ -31,15 +33,17 @@
       object-fit: cover;
     }
   }
+
   &-item {
     position: relative;
-    width: 25%;
+    grid-column: span 3;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 
     @include mobile {
-      width: 50%;
+      grid-column: span 2;
       height: 450px;
     }
 
@@ -91,6 +95,7 @@
       left: 0;
       z-index: 0;
     }
+
     .content {
       width: max-content;
       left: 20px;
@@ -110,7 +115,7 @@
       line-height: 100%;
 
       @include mobile {
-    font-size: 22px;
+        font-size: 22px;
       }
     }
 
@@ -121,13 +126,19 @@
     }
   }
 }
-.info-item:hover{
+
+.info-item:hover {
   overflow: hidden;
 }
+
 .info-item:hover .info-item-bg {
-  transition: all .5s;
-  transform: scale(1.15);
-  top: 0;
-  left: 0;
-  width: 100%;
+  overflow: hidden;
+
+  img {
+    transform: scale(1.25);
+    transition: transform 750ms cubic-bezier(0.61, 1, 0.88, 1) 0s;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 }
