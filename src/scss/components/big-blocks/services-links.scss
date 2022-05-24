@@ -35,6 +35,10 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
+		&:first-child .services-links__picture{
+			bottom: auto;
+			top: 21px;
+		}
 		&:hover{
 			border-bottom: 1px solid #F7941D;
 			transition: all .3s;
