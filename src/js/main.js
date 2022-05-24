@@ -3,11 +3,13 @@ const scrolltop = require('./modules/scrollto');
 const cursor = require('./modules/cursor');
 const loadPosts = require('./modules/scrollingPosts');
 const aboutProjectScrollAnimations = require('./modules/about-project-animations');
+const portfolioGalleryScroll = require('./modules/portfolio-gallery-scroll');
 animations();
 scrolltop();
 cursor();
 loadPosts();
 aboutProjectScrollAnimations();
+portfolioGalleryScroll();
 
 // slider-works
 $('.works__slider').slick({
@@ -23,13 +25,6 @@ $('.double-slider').slick({
     speed: 300,
     slidesToShow: 2,
     autoplay: true
-});
-
-$('.picture__slider').slick({
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-	autoplay: true
 });
 
 let body = document.querySelector('body')

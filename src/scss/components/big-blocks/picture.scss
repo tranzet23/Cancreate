@@ -1,5 +1,5 @@
 .picture{
-	height: 800px;
+	//height: 800px;
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin-bottom: 130px;
@@ -13,4 +13,32 @@
 	.slick-slide img{
 		margin: 0 auto;
 	}
+}
+
+.picture-locomotive {
+	overflow: hidden;
+	position: relative;
+	height: 90vh;
+
+	&__inner {
+		position: absolute;
+		width: 180%;
+		height: max-content;
+		top: 100%;
+		left: 50%;
+		display: grid;
+		row-gap: 40px;
+		transform-origin: center center;
+		transform: rotate(40deg) translateX(-50%);
+	}
+
+	&__line {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: 40px;
+	}
+
+	//&__line img{
+	//
+	//}
 }
