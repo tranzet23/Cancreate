@@ -113,4 +113,7 @@
 
 .services__bg:before {
 	animation: infinite 8s move-line2;
+	@include media-max(768) {
+		animation: none;
+	}
 }
