@@ -40,6 +40,10 @@
         text-transform: uppercase;
         color: #FFFFFF;
 
+        @include mobile {
+          font-size: 24px;
+        }
+
         &:hover {
           -webkit-text-stroke: 1px var(--orange);
           -webkit-text-fill-color: #000;

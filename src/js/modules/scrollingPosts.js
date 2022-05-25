@@ -1,6 +1,6 @@
 module.exports = function () {
     // only for blog-page
-    if(window.location.pathname === '/blog-page.html') {
+    if (window.location.pathname === '/blog-page.html') {
         const postsWrap = document.querySelector('.blog-cards-wrap');
         const loadSpinner = document.getElementById('load-spinner');
 
@@ -8,20 +8,27 @@ module.exports = function () {
         posts.forEach(post => {
             postAnimation(post)
         })
+
         // animation for post
         function postAnimation(post) {
-            gsap.from(post, {
-                scrollTrigger: {
-                    trigger: post,
-                    start: "top 95%",
-                    end: "top 95%",
-                    // markers: true
-                },
+            const postThumb = post.querySelector('.blog-card__img img');
+
+            let showPostScene = gsap.timeline().from(post, {
                 duration: 1,
                 opacity: 0,
                 y: '35%',
                 ease: "power1.easeIn",
-            })
+            }, 0)
+                .set(postThumb, {height: 'auto'})
+                .from(postThumb, {height: 0, ease: "power1.easeIn", duration: 1}, 0)
+
+
+            ScrollTrigger.create({
+                animation: showPostScene,
+                trigger: post,
+                start: "top 95%",
+                end: "top 95%",
+            });
         }
 
         // get the posts from API
