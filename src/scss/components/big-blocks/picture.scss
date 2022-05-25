@@ -1,10 +1,9 @@
 .picture{
-	height: 800px;
+	//height: 800px;
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin-bottom: 130px;
 	@include media-max(768) {
-		height: 528px;
 		margin-bottom: 62px;
 	}
 	&__slider-item{
@@ -13,4 +12,45 @@
 	.slick-slide img{
 		margin: 0 auto;
 	}
+}
+
+.picture-locomotive {
+	overflow: hidden;
+	position: relative;
+	height: 90vh;
+
+	@include mobile {
+		height: 520px;
+	}
+
+	&__inner {
+		position: absolute;
+		width: 180%;
+		height: max-content;
+		top: 100%;
+		left: 50%;
+		display: grid;
+		row-gap: 40px;
+		transform-origin: center center;
+		transform: rotate(40deg) translateX(-50%);
+
+		@include mobile {
+			row-gap: 15px;
+			width: 350%;
+		}
+	}
+
+	&__line {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: 40px;
+
+		@include mobile {
+			column-gap: 15px;
+		}
+	}
+
+	//&__line img{
+	//
+	//}
 }

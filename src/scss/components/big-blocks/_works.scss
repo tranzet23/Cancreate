@@ -12,6 +12,9 @@
 		align-items: flex-end;
 		left: -12px;
 		transition: all .3s;
+		@include media-max(500) {
+			left: 32px;
+		}
 	}
 	.slick-current .works__slider-link{
 		display: flex;
