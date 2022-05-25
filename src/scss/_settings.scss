@@ -304,3 +304,10 @@ p {
 .scroll-hide .header-main{
 	display: block !important;
 }
+
+.bg-blur.bg-new {
+top: 0 !important;
+	img {
+		width: 800px;
+	}
+}

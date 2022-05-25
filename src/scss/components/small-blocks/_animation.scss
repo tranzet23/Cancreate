@@ -82,6 +82,20 @@
 	}
 }
 
+@keyframes move-line2 {
+	from {
+		transform: translateX(-1000px);
+	}
+
+	50% {
+		transform: translateX(700px)
+	}
+
+	to {
+		transform: translateX(-1000px);
+	}
+}
+
 
 .scroll-text {
 	animation: 8s move;
@@ -98,5 +112,5 @@
 }
 
 .services__bg:before {
-	animation: infinite 6s move-line;
+	animation: infinite 8s move-line2;
 }
