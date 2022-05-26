@@ -5,6 +5,10 @@
   width: 100%;
   z-index: 2;
 
+  .container {
+    max-width: none;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -36,10 +40,30 @@
     height: 11px;
     z-index: 4;
 
+    &:hover div:before {
+      width: 100%;
+    }
+
     div {
+      position: relative;
       width: 50px;
       background: #fff;
       height: 2px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: auto;
+        width: 0;
+        height: 2px;
+        background-color: #f7941d;
+        -webkit-transition: width .35s ease-out;
+        -o-transition: width .35s ease-out;
+        transition: width .35s ease-out;
+      }
+
 
       &:first-child {
         width: 36px;
