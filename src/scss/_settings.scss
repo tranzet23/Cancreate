@@ -288,15 +288,19 @@ p {
   }
 }
 
-.grow, .grow-small {
-  transform: scale(1.8);
-  background-color: #fff;
-  mix-blend-mode: difference;
-  border: none;
+.grow, .grow-small, .grow-big {
+	transform: scale(1.8);
+	background-color: #fff;
+	mix-blend-mode: difference;
+	border: none;
 }
 
 .grow-small {
-  transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+.grow-big {
+	transform: scale(3);
 }
 
 .scroll-hide .header-additional{
