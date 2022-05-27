@@ -43,18 +43,7 @@
 			transform: translateY(0);
 		}
 	}
-	&__item-decor{
-		background: #F7941D;
-		transform: translate(-50%,-38%);
-		@include media-max(550) {
-			font-size: 20px;
-			bottom: -9px;
-			right: 0;
-			top: auto;
-			left: auto;
-			transform: translate(0%,0%);  
-		}
-	}
+
 	&__item-title{
 		font-weight: 500;
 		font-size: 28px;

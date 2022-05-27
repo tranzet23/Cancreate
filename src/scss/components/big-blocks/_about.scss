@@ -2,6 +2,7 @@
   padding-top: 130px;
   min-height: 900px;
   padding-bottom: 160px;
+  overflow: hidden;
 
   @include tablet {
     padding-top: 70px;
@@ -61,7 +62,7 @@
 }
 
 .block-bg-img {
-  background: url(https://upload.wikimedia.org/wikipedia/ru/1/1d/%D0%91%D0%B5%D0%B7%D0%BC%D1%8F%D1%82%D0%B5%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D1%8C.png);
+  background: url(https://upload.wikimedia.org/wikipedia/ru/1/1d/%D0%91%D0%B5%D0%B7%D0%BC%D1%8F%D1%82%D0%B5%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D1%8C.png), no-repeat;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   padding-top: 20px;
@@ -75,6 +76,8 @@
   letter-spacing: -0.08em;
   mix-blend-mode: lighten;
   height: 100%;
+  background-size: 200% 200%;
+
 
   @include tablet {
     font-size: 50px;
