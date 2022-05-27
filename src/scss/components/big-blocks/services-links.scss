@@ -168,6 +168,8 @@
 		text-transform: none;
 		max-width: 480px;
 		display: none;
+		position: relative;
+		z-index: 21;
 		@include media-max(1350) {
 			font-size: 14px;
 			max-width: 333px;
