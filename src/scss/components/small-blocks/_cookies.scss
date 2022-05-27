@@ -49,6 +49,11 @@
         text-align: center;
         text-transform: uppercase;
         color: #FFFFFF;
+        transition: all .3s;
+
+        &:hover {
+          color: #f7941d;
+        }
 
         @include media-max(550) {
           font-size: 11px;

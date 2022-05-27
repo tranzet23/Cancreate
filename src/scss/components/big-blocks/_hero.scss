@@ -29,6 +29,14 @@
     display: flex;
     justify-content: flex-end;
     z-index: 10000;
+
+
+    svg {
+      transition: all .3s;
+      &:hover {
+        color: #f7941d;
+      }
+    }
   }
 
   .scroll {

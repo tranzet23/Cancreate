@@ -32,6 +32,7 @@ let burgerBtn = document.querySelector('.burger-menu');
 let menuContent = document.querySelector('.dropdown-menu');
 
 burgerBtn.addEventListener('click', function () {
+    console.log(123)
     if (menuContent.classList.contains('flex') === false) {
         menuContent.classList.add('flex');
         burgerBtn.classList.add('burger-close');
@@ -432,3 +433,5 @@ $('#audio-control').click(function(){
         $("#video-main").prop('muted', true);
     }
 });
+
+
