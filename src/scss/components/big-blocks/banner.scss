@@ -2,24 +2,52 @@
 	position: relative;
 	padding-top: 128px;
 	white-space: nowrap;
-	// min-height: 700px;
-	&::before{
-		position: absolute;
-		content:'';
-		background-image: url(../img/banner-elipse.png);
-		height: 104%;
+
+	@include media-max(600) {
+		padding-bottom: 0;
+		padding-top: 40px;
+		height: 220px;
+	}
+
+
+	.scroll-text.scroll-text-2.banner__text-border {
+		top: 170px;
+		-webkit-text-stroke: 1px var(--orange);
+		-webkit-text-fill-color: #000;
+
+		@include media-max(600) {
+			top: 110px;
+		}
+	}
+	& .scroll-text-hide {
 		width: 100%;
-		top: 0;
-		background-repeat: no-repeat;
 	}
-	&__text{
-		text-align: right;
+
+	& .scroll-text.scroll-text-1 {
+		left: -100%;
+
+		@include media-max(600) {
+			top: 40px !important;
+		}
 	}
-	&__text-border{
-		position: relative;
-		left: -81px;
-		@include media-max(768) {
-			left: -250px;
+	& .scroll-text.scroll-text-2 {
+		right: -100%;
+	}
+
+	&  .bg-blur {
+		top: -30% !important;
+		width: 30%;
+
+		@include tablet {
+			top: -40px !important;
+		}
+		@include mobile {
+			top: -10px !important;
+		}
+	}
+	& .scroll-text {
+		@include mobile {
+			font-size: 70px;
 		}
 	}
 }

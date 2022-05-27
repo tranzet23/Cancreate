@@ -1,12 +1,12 @@
 .text-block {
   position: relative;
   padding-top: 120px;
-  padding-bottom: 250px;
+  padding-bottom: 350px;
   overflow: hidden;
 
   @include tablet {
     padding-top: 200px;
-    padding-bottom: 200px;
+    padding-bottom: 225px;
   }
 
 
@@ -35,4 +35,46 @@
       top: -200px;
     }
   }
+
+
+
+}
+
+.text-block-basket {
+  &  .scroll-text.scroll-text-2{
+    top: 30px !important;
+    --webkit-text-stroke: 0;
+    -webkit-text-fill-color: initial !important;
+    color: #121212 !important;
+    opacity: 0.9;
+
+    @include mobile {
+      top: 36% !important;
+    }
+  }
+  & .scroll-text.scroll-text-1 {
+    top: 200px;
+    -webkit-text-stroke: 1px var(--orange);
+    -webkit-text-fill-color: #000;
+  }
+  & .bg-blur {
+    @include media-max(1600) {
+      top: -5%!important;
+    }
+  }
+}
+
+
+.text-block-basket .single-basket {
+  & .scroll-text.scroll-text-1 {
+    @include media-max(600) {
+      top: 65% !important;
+    }
+  }
+  & .scroll-text.scroll-text-2 {
+    @include media-max(600) {
+      top: 35%!important;
+    }
+  }
+
 }
