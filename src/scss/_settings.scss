@@ -132,7 +132,7 @@ ul {
 	padding: 0 40px;
 	margin: 0 auto;
 	width: 100%;
-	max-width: 1440px;
+	max-width: none;
 
 	@include tablet {
 		padding: 0 20px;
@@ -314,3 +314,6 @@ top: 0 !important;
 .privacy {
 	overflow: hidden;
 }
+//.img-cursor .custom-cursor-js .cursor {
+//	border-color: red !important;
+//}
