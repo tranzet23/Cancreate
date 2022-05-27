@@ -11,7 +11,7 @@ module.exports = function () {
                 .timeline({
                     scrollTrigger: {
                         trigger: 'section.single-img',
-                        scrub: 1,
+                        scrub: 0.5,
                         start: 'top bottom',
                         end: 'bottom 30%',
                     }
