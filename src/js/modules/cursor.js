@@ -36,6 +36,7 @@ module.exports = function cursor() {
             item.addEventListener('mouseleave', function () {
                 cursor.classList.remove('grow');
                 cursor.classList.remove('grow-small');
+                cursor.classList.remove('grow-big');
             });
 
             item.addEventListener('mousemove', function () {
@@ -43,6 +44,11 @@ module.exports = function cursor() {
                 if (item.classList.contains('small')) {
                     cursor.classList.remove('grow');
                     cursor.classList.add('grow-small');
+                }
+
+                if (item.classList.contains('big')) {
+                    cursor.classList.remove('grow');
+                    cursor.classList.add('grow-big');
                 }
             });
         });

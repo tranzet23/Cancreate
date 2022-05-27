@@ -8,7 +8,9 @@
     flex-direction: row-reverse;
   }
 
-
+.view-link {
+  display: flex !important;
+}
   &-wrap {
     position: relative;
     width: max-content;
