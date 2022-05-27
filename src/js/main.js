@@ -4,12 +4,14 @@ const cursor = require('./modules/cursor');
 const loadPosts = require('./modules/scrollingPosts');
 const aboutProjectScrollAnimations = require('./modules/about-project-animations');
 const portfolioGalleryScroll = require('./modules/portfolio-gallery-scroll');
+const textScrollAnim = require('./modules/text-scroll-anim');
 animations();
 scrolltop();
 cursor();
 loadPosts();
 aboutProjectScrollAnimations();
 portfolioGalleryScroll();
+textScrollAnim();
 
 // slider-works
 $('.works__slider').slick({

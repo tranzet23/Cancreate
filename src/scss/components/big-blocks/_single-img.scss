@@ -1,6 +1,7 @@
 .single-img {
   overflow: hidden;
   padding-bottom: 250px;
+  position: relative;
 
   &__container {
     display: flex;
@@ -29,18 +30,19 @@
   .scroll-text {
     &:first-child {
       top: 130px;
-      right: -3410px;
+      //right: -240%;
     }
 
 
     &:nth-child(2) {
       top: 300px;
-      right: -3000px;
+      //left: -290%;
     }
   }
 }
 
 .scroll-text {
+  display: inline-block;
   position: absolute;
   font-weight: 600;
   font-size: 180px;
@@ -49,4 +51,14 @@
   text-transform: uppercase;
   color: #121212;
   white-space: nowrap;
+}
+
+.scroll-text-hide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: auto;
+  width: 50%;
+  height: 100%;
 }
