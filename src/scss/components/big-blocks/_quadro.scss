@@ -23,13 +23,13 @@
 
   &-bg {
     position: absolute;
-    height: 100%;
     background: #F7941D;
     opacity: 0.8;
-    filter: blur(500px);
-    width: 60%;
+    filter: blur(150px);
+    width: 45%;
     top: 50%;
     left: 50%;
+    height: 20%;
     transform: translate(-50%, -50%);
     z-index: -1;
     @include tablet {
