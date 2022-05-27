@@ -7,6 +7,7 @@ const portfolioGalleryScroll = require('./modules/portfolio-gallery-scroll');
 const textScrollAnim = require('./modules/text-scroll-anim');
 const textScrollAnimFull = require('./modules/text-scroll-banner');
 const bgImgScrollAnimFull = require('./modules/bg-img-scroll-anim.js');
+const textScrollIndexPage = require('./modules/text-scroll-index.js');
 animations();
 scrolltop();
 cursor();
@@ -16,6 +17,7 @@ portfolioGalleryScroll();
 textScrollAnim();
 textScrollAnimFull();
 bgImgScrollAnimFull();
+textScrollIndexPage();
 
 // slider-works
 $('.works__slider').slick({

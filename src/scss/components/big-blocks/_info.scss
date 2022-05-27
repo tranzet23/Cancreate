@@ -42,7 +42,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-
+	cursor: none;
     @include mobile {
       grid-column: span 2;
       height: 450px;
