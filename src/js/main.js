@@ -4,12 +4,18 @@ const cursor = require('./modules/cursor');
 const loadPosts = require('./modules/scrollingPosts');
 const aboutProjectScrollAnimations = require('./modules/about-project-animations');
 const portfolioGalleryScroll = require('./modules/portfolio-gallery-scroll');
+const textScrollAnim = require('./modules/text-scroll-anim');
+const textScrollAnimFull = require('./modules/text-scroll-banner');
+const bgImgScrollAnimFull = require('./modules/bg-img-scroll-anim.js');
 animations();
 scrolltop();
 cursor();
 loadPosts();
 aboutProjectScrollAnimations();
 portfolioGalleryScroll();
+textScrollAnim();
+textScrollAnimFull();
+bgImgScrollAnimFull();
 
 // slider-works
 $('.works__slider').slick({
@@ -364,14 +370,6 @@ for (let i = 0; i < bg.length; i++){
     });    
 }
 
-let bgImg = document.querySelectorAll('.block-bg-img');
-for (let i = 0; i < bgImg.length; i++){
-    window.addEventListener('mousemove', function(e) {
-        let x = e.clientX / window.innerWidth;
-        let y = e.clientY / window.innerHeight;
-        bgImg[i].style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
-    });
-}
  // scroll-top
 $("document").ready(function($){
     var scrollBtn = $('.scroll-svg');

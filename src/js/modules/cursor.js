@@ -37,10 +37,17 @@ module.exports = function cursor() {
                 cursor.classList.remove('grow');
                 cursor.classList.remove('grow-small');
                 cursor.classList.remove('grow-big');
+                cursor.classList.remove('cursor-view');
             });
 
             item.addEventListener('mousemove', function () {
-                cursor.classList.add('grow');
+                if (item.classList.contains('cursor-block-view')) {
+                    cursor.classList.remove('grow');
+                    cursor.classList.add('cursor-view');
+                } else {
+                    cursor.classList.add('grow');
+                }
+
                 if (item.classList.contains('small')) {
                     cursor.classList.remove('grow');
                     cursor.classList.add('grow-small');

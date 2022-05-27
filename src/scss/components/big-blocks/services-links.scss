@@ -100,45 +100,7 @@
 			font-size: 40px;
 		}
 	}
-	&__text{
-		font-weight: 500;
-		font-size: 14px;
-		line-height: 16px;
-		text-align: center;
-		color: #FFFFFF;
-		width: 128px;
-		height: 128px;
-		background: rgba(0, 0, 0, 0.2);
-		backdrop-filter: blur(50px);
-		border-radius: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		position: absolute;
-		letter-spacing: 0px;
-		text-transform: capitalize;
-		&::before{
-			position: absolute;
-			content: '';
-			width: 128px;
-			height: 128px;
-			border: 1px solid #FFFFFF;
-			border-radius: 100%;
-			left: -10px;
-			@include media-max(768) {
-				width: 86px;
-				height: 80px;
-				left: -6px;
-			}
-		}
-		@include media-max(768) {
-			width: 86px;
-			height: 80px;
-		}
-	}
+
 	&__picture{
 		background-repeat: no-repeat;
 		height: 400px;
