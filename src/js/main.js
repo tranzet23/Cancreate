@@ -366,14 +366,6 @@ for (let i = 0; i < bg.length; i++){
     });    
 }
 
-let bgImg = document.querySelectorAll('.block-bg-img');
-for (let i = 0; i < bgImg.length; i++){
-    window.addEventListener('mousemove', function(e) {
-        let x = e.clientX / window.innerWidth;
-        let y = e.clientY / window.innerHeight;
-        bgImg[i].style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
-    });
-}
  // scroll-top
 $("document").ready(function($){
     var scrollBtn = $('.scroll-svg');
