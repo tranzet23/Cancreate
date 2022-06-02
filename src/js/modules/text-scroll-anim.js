@@ -1,6 +1,6 @@
 module.exports = function () {
     document.addEventListener('DOMContentLoaded', function () {
-        if (window.location.pathname === '/index.html') {
+        if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
             let scrollText1 = document.querySelector('section.single-img .scroll-text.scroll-text-1');
             let scrollText2 = document.querySelector('section.single-img .scroll-text.scroll-text-2');
 

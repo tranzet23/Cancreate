@@ -1,7 +1,7 @@
 module.exports = function () {
     document.addEventListener('DOMContentLoaded', function () {
         try {
-            if (window.location.pathname === '/index.html') {
+            if (window.location.pathname === '/index.html'  || window.location.pathname === '/') {
                 let scrollTextHide = document.querySelector('.single-img.banner .scroll-text-hide');
                 let { offsetWidth: blockTextWidth } = scrollTextHide;
                 let scrollTextBanner1 = document.querySelector('.single-img.banner .scroll-text.scroll-text-1');
@@ -14,8 +14,8 @@ module.exports = function () {
                                 scrollTrigger: {
                                     trigger: '.single-img.banner',
                                     scrub: 1,
-                                    start: 'top bottom-=10%',
-                                    end: 'bottom 60%',
+                                    start: 'top bottom-=700%',
+                                    end: 'bottom 500%',
                                 }
                             })
                             .to(scrollTextBanner1, {x: (blockTextWidth + (scrollTextBanner1.offsetWidth)) + 'px'}, 0)
@@ -41,3 +41,12 @@ module.exports = function () {
         }
     })
 }
+
+const cookieBtn = document.querySelectorAll('.cookie button')
+const cookieWrap = document.querySelector('.cookie');
+
+cookieBtn.forEach((item) => {
+    item.addEventListener('click', function () {
+        cookieWrap.classList.add('close')
+    })
+})
