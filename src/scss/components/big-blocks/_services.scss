@@ -21,12 +21,12 @@
 			position: absolute;
 			background-image: url(../img/newww.png);
 			content: '';
-			width: 200%;
+			width: 270%;
 			height: 200%;
 			bottom: 0;
 			background-repeat: no-repeat;
 			@include media-max(768) {
-				left: -300px;
+				left: -580px;
 			}
 		}
 	}
