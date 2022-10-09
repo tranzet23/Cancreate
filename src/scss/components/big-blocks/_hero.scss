@@ -59,7 +59,7 @@
 
       &_video {
         height: 100%;
-        object-fit: fill;
+        object-fit: cover;
       }
 
       &:hover .player_controls {
@@ -181,7 +181,7 @@
   height: 300px !important;
 
  & .sound svg {
-    cursor: pointer;
+    cursor: none !important;
 
   }
   & .scroll-top  {

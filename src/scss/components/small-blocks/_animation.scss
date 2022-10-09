@@ -84,15 +84,15 @@
 
 @keyframes move-line2 {
 	from {
-		transform: translateX(-1000px);
+		transform: translateX(-300px);
 	}
 
 	50% {
-		transform: translateX(700px)
+		transform: translateX(300px)
 	}
 
 	to {
-		transform: translateX(-1000px);
+		transform: translateX(-300x);
 	}
 }
 
@@ -110,4 +110,22 @@
 	@include media-max(768) {
 		animation: none;
 	}
+}
+
+
+@keyframes move-3 {
+	from {
+		transform: translateX(0);
+	}
+
+	50% {
+		transform: translateX(50px);
+	}
+
+	to {
+		transform: translateX(0px);
+	}
+}
+.services-element {
+	animation: infinite 5s move-3;
 }

@@ -51,7 +51,9 @@ h6 {
 img {
   max-width: 100%;
 }
-
+a, button {
+  cursor: none !important;
+}
 a {
   text-decoration: none;
 }
@@ -379,4 +381,41 @@ p {
   margin: 0 auto;
   width: max-content;
   z-index: 1;
+}
+.single-img.banner {
+   .scroll-text.scroll-text-2 {
+     right: 70%!important;
+  }
+   .scroll-text.scroll-text-1 {
+     left: -10%;
+  }
+
+}
+
+input, textarea, svg {
+  cursor: none !important;
+}
+
+video {
+  object-fit: cover;
+}
+
+.player_video.pc {
+  @include mobile {
+    display: none;
+  }
+}
+.player_video.mob {
+  display: none;
+  @include mobile {
+    display: block;
+  }
+}
+
+.mr-5 {
+  margin-right: 5px;
+
+  @include mobile {
+    margin-right: 0;
+  }
 }

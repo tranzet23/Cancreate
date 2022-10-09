@@ -83,10 +83,45 @@
   position: relative;
   width: 100%;
   padding: 0 40px;
+  display: flex;
+  justify-content: center;
 
   @include tablet {
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  .menu {
+    position: relative;
+  }
+
+  ul {
+    width: 285px;
+    text-align: left;
+
+    &.menu-right {
+      position: absolute;
+      right: -425px;
+      top: 0;
+
+      @include media-max(1250) {
+      right: -300px;
+    }
+
+      @include tablet {
+        position: relative;
+        right: auto;
+        top: auto;
+      }
+    }
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   .contact-us {

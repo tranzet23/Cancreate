@@ -7,6 +7,7 @@ const portfolioGalleryScroll = require('./modules/portfolio-gallery-scroll');
 const textScrollAnim = require('./modules/text-scroll-anim');
 const textScrollAnimFull = require('./modules/text-scroll-banner');
 const bgImgScrollAnimFull = require('./modules/bg-img-scroll-anim.js');
+const textScrollIndexPage = require('./modules/text-scroll-index.js');
 animations();
 scrolltop();
 cursor();
@@ -16,6 +17,7 @@ portfolioGalleryScroll();
 textScrollAnim();
 textScrollAnimFull();
 bgImgScrollAnimFull();
+textScrollIndexPage();
 
 // slider-works
 $('.works__slider').slick({
@@ -23,7 +25,8 @@ $('.works__slider').slick({
     speed: 300,
     slidesToShow: 1,
     centerMode: true,
-    variableWidth: true
+    variableWidth: true,
+    arrows: false,
 });
 
 $('.double-slider').slick({
@@ -114,34 +117,38 @@ AOS.init({
 //scroll section
 
 //count number
-let statsSection = document.querySelector('.stats')
 
-if (statsSection) {
-    statsSection.addEventListener('mouseover', function () {
-        $('.stats__item-number').each(function () {
-            $(this).prop('Counter', 0).animate({
-                Counter: $(this).text()
-            }, {
-                duration: 4000,
-                easing: 'swing',
-                step: function (now) {
-                    $(this).text(Math.ceil(now));
-                }
-            });
-        });
-    })
-}
+const statsItems = document.querySelectorAll('.stats__item-number');
+
+document.querySelectorAll(".js-count-up").forEach((element) => {
+    const { start, end, decimals, duration } = element.dataset;
+    const countUp = new CountUp(
+        element,
+        start,
+        end,
+        decimals,
+        duration,
+        element.dataset
+    );
+
+    new Waypoint({
+        element,
+        handler: (direction) => {
+            if (direction === "down") {
+                countUp.start();
+            }
+        },
+        offset: "95%"
+    });
+});
+
 
 //triple-section
-
 let tripleSection = document.querySelector('.triple')
 if (tripleSection) {
     tripleSection.addEventListener('mouseover', function () {
         tripleSection.classList.add('scroll-sec')
     })
-    // tripleSection.addEventListener('mouseleave', function () {
-    //     tripleSection.classList.remove('scroll-sec')
-    // })
 }
 
 //video
@@ -442,3 +449,9 @@ $('#audio-control').click(function(){
 });
 
 
+// co0ckie
+let cookieBtn = document.querySelector('.cookies-wrap a');
+let cookieWrap = document.querySelector('.cookies-wrap');
+cookieBtn.addEventListener('click', function () {
+    cookieWrap.remove()
+})

@@ -1,6 +1,6 @@
 module.exports = function () {
     document.addEventListener('DOMContentLoaded', function () {
-        if (window.location.pathname === '/index.html') {
+        if (window.location.pathname === '/index.html' || window.location.pathname === '/' ) {
             let bgImgBlock = document.querySelector('.block-bg-img');
 
             try {
@@ -11,7 +11,6 @@ module.exports = function () {
                             scrub: 0.5,
                             start: 'top top',
                             end: 'bottom bottom',
-                            markers: true,
                         }
                     })
                     .to(bgImgBlock, {css: {
