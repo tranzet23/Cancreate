@@ -22,6 +22,10 @@
   &__link {
     color: inherit;
     cursor: none !important;
+
+    @include mobile {
+      font-size: 30px;
+    }
   }
 
   &__item {
@@ -174,9 +178,11 @@
 
   .services-links__item.services-links__item--active .services-links__picture {
     opacity: 0;
+    height: 0;
   }
 
   .services-links__item.services-links__item--active .services-links__item-close {
     opacity: 1;
+    height: auto;
   }
 }

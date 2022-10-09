@@ -26,6 +26,7 @@
     background: #F7941D;
     opacity: 0.8;
     filter: blur(150px);
+    -webkit-backdrop-filter: blur(150px);
     width: 45%;
     top: 50%;
     left: 50%;
@@ -34,6 +35,10 @@
     z-index: -1;
     @include tablet {
       width: 100%;
+    }
+    @include mobile {
+      height: 40%;
+      width: 150%;
     }
   }
 
@@ -53,6 +58,9 @@
   @include media-max(1400) {
     left: 50%;
   }
+  @include mobile {
+    transform: rotate(100deg) !important;
+  }
 }
 
 .quadro-item-3 {
@@ -63,6 +71,10 @@
 .quadro-item-4 {
   top: 60%;
   left: 50%;
+
+  @include mobile {
+    top: 53%;
+  }
 }
 
 .quadro-item-5 {
@@ -81,6 +93,9 @@
   @include tablet {
     width: 40%;
   }
+  @include mobile {
+    width: 45%;
+  }
 }
 
 .quadro-item-3 img {
@@ -90,7 +105,7 @@
   @include mobile {
     bottom: 0;
     right: 0;
-    width: 310px;
+    width: 241px;
   }
 }
 
@@ -100,7 +115,7 @@
     left: 50px;
   }
   @include mobile {
-    bottom: 0;
+    bottom: 80px;
     right: auto;
   }
 }
@@ -110,11 +125,19 @@
     top: 0;
     left: 20px;
   }
+  @include mobile {
+    left: 50px;
+    top: 70px;
+  }
 }
 
 .quadro-item.quadro-item-5 {
   @include tablet {
     right: -70px;
+  }
+  @include mobile {
+      right: -130px;
+    top: 140px;
   }
 }
 
@@ -122,11 +145,18 @@
   @include tablet {
     width: 60%;
   }
+  @include mobile {
+    width: 50%;
+  }
 }
 
 .quadro-item.quadro-item-2 {
   @include tablet {
     top: 30%;
+  }
+  @include mobile {
+    top: 24%;
+    left: 37%;
   }
 
   img {

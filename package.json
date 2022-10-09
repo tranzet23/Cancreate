@@ -53,6 +53,8 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "aos": "^2.3.4"
+    "aos": "^2.3.4",
+    "countup.js": "^2.2.0",
+    "imagesloaded": "^5.0.0"
   }
 }

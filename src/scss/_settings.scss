@@ -399,3 +399,23 @@ input, textarea, svg {
 video {
   object-fit: cover;
 }
+
+.player_video.pc {
+  @include mobile {
+    display: none;
+  }
+}
+.player_video.mob {
+  display: none;
+  @include mobile {
+    display: block;
+  }
+}
+
+.mr-5 {
+  margin-right: 5px;
+
+  @include mobile {
+    margin-right: 0;
+  }
+}
