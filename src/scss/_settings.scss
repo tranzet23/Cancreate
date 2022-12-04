@@ -246,7 +246,6 @@ p {
 
 .opacity-0 {
   opacity: 0 !important;
-  opacity: 0 !important;
 }
 
 .scroll-container {
@@ -265,9 +264,14 @@ p {
 
 .custom-cursor-js {
   cursor: none;
+
+  @include mobile {
+    cursor: default !important;
+  }
 }
 
 .cursor {
+  cursor: none;
   visibility: hidden;
   opacity: 0;
   position: fixed;
@@ -291,6 +295,12 @@ p {
   &.visible {
     visibility: visible;
     opacity: 1;
+  }
+  @include mobile {
+    cursor: default !important;
+    visibility: visible;
+    opacity: 1;
+    border: none;
   }
 }
 

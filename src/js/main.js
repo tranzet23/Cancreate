@@ -259,7 +259,7 @@ try {
                 togglePlay();
             }
         }
-        let videoBlock = document.querySelector('.video-block')
+
 
 // =======================
         video.addEventListener('timeupdate', updateProgress);
@@ -449,9 +449,11 @@ $('#audio-control').click(function(){
 });
 
 
+
 // co0ckie
 let cookieBtn = document.querySelector('.cookies-wrap a');
 let cookieWrap = document.querySelector('.cookies-wrap');
 cookieBtn.addEventListener('click', function () {
     cookieWrap.remove()
 })
+
