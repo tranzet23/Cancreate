@@ -27,7 +27,7 @@ module.exports = function cursor() {
                 mouseY = e.clientY;
             });
 
-            block.addEventListener('mouseleave', function (e) {
+            block.addEventListener('mouseleave', function () {
                 cursor.classList.remove('visible');
             });
         })
@@ -38,12 +38,29 @@ module.exports = function cursor() {
                 cursor.classList.remove('grow-small');
                 cursor.classList.remove('grow-big');
                 cursor.classList.remove('cursor-view');
+                if (screen.width < 768) {
+                    cursor.classList.remove('grow');
+                    cursor.classList.remove('grow-small');
+                    cursor.classList.remove('grow-big');
+                    cursor.classList.remove('cursor-view');
+                }
             });
+
+            if (screen.width < 768) {
+                cursor.classList.remove('grow');
+            }
+
 
             item.addEventListener('mousemove', function () {
                 if (item.classList.contains('cursor-block-view')) {
                     cursor.classList.remove('grow');
                     cursor.classList.add('cursor-view');
+                    if (screen.width < 768) {
+                        cursor.classList.remove('grow');
+                        cursor.classList.remove('grow-small');
+                        cursor.classList.remove('grow-big');
+                        cursor.classList.remove('cursor-view');
+                    }
                 } else {
                     cursor.classList.add('grow');
                 }
@@ -51,13 +68,29 @@ module.exports = function cursor() {
                 if (item.classList.contains('small')) {
                     cursor.classList.remove('grow');
                     cursor.classList.add('grow-small');
+                    if (screen.width < 768) {
+                        cursor.classList.remove('grow');
+                        cursor.classList.remove('grow-small');
+                        cursor.classList.remove('grow-big');
+                        cursor.classList.remove('cursor-view');
+                    }
                 }
 
                 if (item.classList.contains('big')) {
                     cursor.classList.remove('grow');
                     cursor.classList.add('grow-big');
+                    if (screen.width < 768) {
+                        cursor.classList.remove('grow');
+                        cursor.classList.remove('grow-small');
+                        cursor.classList.remove('grow-big');
+                        cursor.classList.remove('cursor-view');
+                    }
+                }
+                if (screen.width < 768) {
+                    cursor.classList.remove('grow');
                 }
             });
+
         });
     }
 
@@ -67,5 +100,10 @@ module.exports = function cursor() {
         document.querySelector('main').appendChild(cursor);
 
         return cursor;
+
+        // (window.innerWidth > 768) && customCursorBlock.classList.remove('cursor');
     }
 }
+
+
+
